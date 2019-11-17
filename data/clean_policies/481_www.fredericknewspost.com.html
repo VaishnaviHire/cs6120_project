@@ -1,0 +1,110 @@
+Privacy Policy - The Frederick News-Post : Site
+
+
+<!--
+ if (typeof(TNStats_Tracker) !== 'undefined' && typeof(TNTracker) === 'undefined') { TNTracker = new TNStats_Tracker('fredericknewspost.com'); TNTracker.setTrackerDomain('stats-newyork1.bloxcms.com'); TNTracker.trackPageView(); }
+// -->
+
+
+    var browser_pre_version = false;
+
+
+
+
+
+            Close
+        
+
+
+
+
+    // <![CDATA[
+        $(function(){
+            var $popover = $.Deferred()
+                .done(function(){
+                    var $i = $('#popoverAd');
+                        $i.find('.tncms-region-ads').show();
+                        $i.css({
+                            left:$(window).width()/2 - ($i.width()/2),
+                            top:($(window).height()/2) - ($i.height()/2)
+                        }).show();
+                        $i.siblings('.ui-widget-overlay').css({
+                            width: $(window).width(),
+                            height: $(document).height()
+                        }).show();
+                        $i.find('.close').bind('click',function(){
+                            $i.siblings('.ui-widget-overlay').fadeOut(750).
+                            siblings('#popoverAd').animate({left:-$i.outerWidth()}, 750, 'easeInOutBack');
+                        });
+                });
+
+            // logic for whether to load popover or not
+            var bloxAdpopover = $.cookie('blox-popover');
+            // No longer creating EMPTY cookie, so the ad can be section specific.
+                        //if (bloxAdpopover != 'EMPTY'){
+                if( $('#popoverAd .tncms-region-ads').children(':not("script")').length==0 ){
+                    //$.cookie("blox-popover", "EMPTY", {path: '/'});
+                }else{
+                    if(bloxAdpopover == null){
+                        var date = new Date();
+                        var minutes =5;
+                        date.setTime(date.getTime() + (minutes * 60 * 1000));               
+                    
+                        $.cookie("blox-popover", "wait", {path: '/', expires: date});
+                        $popover.resolve();
+                    };
+                };
+            //};
+        });
+        // ]]>
+    
+
+
+
+
+
+
+
+
+ePages
+
+
+Subscribe
+
+
+Search the site
+
+
+Search historical archives
+
+
+Contact Us
+
+
+Customer Service
+
+
+
+
+
+July 2, 2015
+
+
+
+
+
+
+
+
+
+
+
+
+oTNCMS_Ad.setRelative();
+oTNCMS_Ad.show(null, null, 'http://bloximages.newyork1.vip.townnews.com/fredericknewspost.com');
+
+
+
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1419260117838-9'); });
+
+703-791-9328301-668-2004301-798-2616301-432-3889301-698-4692SearchAttorneys & LawyersAutomobile DealersAutomobile PartsAutomobile ServiceBeauty SalonsClothing StoresComputersDentistsEntertainmentFood & DiningMovie TheatersPhysicians & SurgeonsPizzaPlumbing ContractorsReal EstatePhone number:E-mail:Address:Â© Copyright 2015, The Frederick News-Post , Frederick, MD

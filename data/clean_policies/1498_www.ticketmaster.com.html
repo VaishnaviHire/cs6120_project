@@ -1,0 +1,489 @@
+Ticketmaster Privacy Policy
+
+
+    You must set your browser to accept cookies and to enable Javascript in order to access certain functions of this site, including the purchase of tickets.
+    
+
+
+To order tickets by phone, please call Ticketmaster National Sales at 1-800-745-3000.  
+Skip to main content
+
+
+var member_name = GetCookie("MNAME");
+var check1 = GetCookie("MID");
+var member_text = "";
+var action_text;
+if( member_name ) {
+    member_name = member_name.stripScripts().stripTags().escapeHTML();
+}
+
+if ( check1 == null || check1.length == 0 ) {
+     member_text = "";
+     action_text = "Log In";
+     member_name = null;
+}
+else {
+     if( member_name != 'null' ) {
+         member_text = ", " + member_name;
+     }
+     action_text = "Log Out";
+}
+
+function buildLink( myFlag ) {
+     if( myFlag == "log" ) {
+         if ( check1 == null || check1.length == 0 ) {
+             var theLink = "https://www.ticketmaster.com/member?";
+         }
+         else {
+             var theLink = "https://www.ticketmaster.com/member/logout";
+         }
+         document.write( "<a href=\"" + theLink + "\" class=\"passive\">");
+     }
+     else {
+          if( check1 != null || check1.length != 0 ) {
+               var theLink = "https://www.ticketmaster.com/member/edit_subscriptions?tm_link=tm_alert_header";
+          }
+          else {
+               var theLink = "http://www.ticketmaster.com/ticketalerts/?tm_link=tm_alert_header";
+          }
+          document.write( "<a href=\"" + theLink + "\" class=\"active\" title=\"Sign Up \/ Log In for TicketAlerts\">");
+     }
+}
+
+ 
+ 
+    var reg_ex = new RegExp("&eacute;","g");
+    var replaceItem = '\u00E9';
+
+var search_text = "Search Artist, Team, or Venue";
+search_text = search_text.replace(reg_ex,replaceItem);
+
+function checkSearchFormAction(form) {
+    var current_suggest = typeof search_suggest !== 'undefined' && search_suggest ? search_suggest.currentElement() : null;
+    if (typeof search_suggest !== 'undefined' && search_suggest && search_suggest.mode === SearchSuggest.MODES.DIRECT && current_suggest && current_suggest.getAttribute('data-directURL')) {
+        window.location = current_suggest.getAttribute('data-directURL');
+        return false;
+    } else {
+        return verifySearchString(form);
+    }
+}
+
+function verifySearchString(form) {
+    if(form.q.value.replace(/^\s*|\s*$/g,'') == "" || form.q.value == search_text ){
+        alert(checkUni("Please enter search text."));
+        form.q.focus();
+        form.q.value = "";
+        return false;
+    }
+    if (typeof(edp) != "undefined" && edp.active_mode == 'isc' && edp.isc.cart.items.length) {
+        return edp.isc.cart.leaving_isc_dialog.on_form_submit_attempt(form);
+    }
+}
+
+function createSearchSuggestion(isSuperNavMiniSearch) {
+    
+    search_suggest = search_suggest || new SearchSuggest( typeof searchSuggest_direct !== 'undefined' && searchSuggest_direct ? SearchSuggest.MODES.DIRECT : SearchSuggest.MODES.STANDARD );
+        Event.observe($('search_input'), 'keyup', function(event){
+            showSuggestions(event);
+        });        if(isSuperNavMiniSearch || 1){
+            Event.observe($('search_input'), 'focus', function(event) {
+                change_placeholder_color(this.id, search_text);
+            });
+        }    Event.observe($('search_input'), 'blur', function(event) {
+        if ( this.value == '' ) {
+            this.value = search_text;
+            this.style.color ='#898989';
+        }            if(isSuperNavMiniSearch || 1){
+                change_placeholder_color(this.id, search_text);
+            }        if ( global.get('cancel_hide') == 0 ) {
+            var suggest = $("search-suggest") || $("searchSuggest") || $("search-suggest");
+            if(suggest){
+                suggest.hide();
+            }
+            $("searchSuggest-result").update('');
+            if (search_suggest.mode === SearchSuggest.MODES.DIRECT) {
+                search_suggest.reset();
+            }
+            updateInputText(this);
+        }
+    });
+};
+
+
+Auto-suggest. Use up and down arrow keys to select suggestions.
+
+
+
+
+
+  
+
+Top Suggestions
+
+
+
+
+
+
+    (function($){
+        createNamespace('TM.global_header');
+        $.extend(TM.global_header, {
+            TM_SEARCH_TOGGLE : "{\"omn_domain_owner\":\"TM_US:\",\"anchored_tab_enabled\":1}",
+            TU : {
+                searchPlaceholder: "Search Artist, Team, or Venue" 
+            }
+        });
+    }(jQuery));
+                createSearchSuggestion(); 
+ 
+Music
+
+
+Sports
+
+
+Arts & Theater
+
+
+Family
+ Deals 
+ 
+
+
+ Error: please enter city or zip code or click "See All Cities" below.
+Error: we could not find this location. Please check your entry (city name only or zip code) or click the "See All Cities" link below.
+Change Location
+We found multiple results matching "keyword".
+                        Please choose from the list below                    
+
+
+
+
+
+
+
+
+
+See All Cities
+International
+
+
+
+
+
+            <!--
+                var location_items = {
+                    "Chicagoland & Northern IL": "Chicagoland, Northern IL & Northern Indiana",
+                    "Cleveland, Youngstown & More": "Cleveland, Youngstown, Akron & More",
+                    "Minneapolis/St. Paul & More": "Greater Minneapolis - Saint Paul Area",
+                    "Iowa for LNUS": "Iowa",
+                    "Memphis, Little Rock & More": "Memphis, Little Rock, Southhaven, Tupelo, Tunica & More",
+                    "Northern New Jersey for LNUS": "Northern New Jersey",
+                    "All of Canada": "Canada"
+                };
+
+                var my_market = "Greater Pittsburgh Area";
+                
+                var enter_to_change_location = "<span class='hideContent'> Enter to change location if needed.</span>";
+
+                var location_box_market_name = GetCookie("MARKET_NAME");
+                if( location_box_market_name ) {
+                    location_box_market_name = location_box_market_name.base64decode().stripScripts().stripTags();
+                }
+
+                var targetElm = jQuery('#locName');
+                var market_text = '';
+                if( my_market.strip().empty() ) {
+                    if( location_box_market_name ) {
+                        my_market = location_box_market_name;
+                    }
+                }
+                else if( my_market != location_box_market_name ) {
+                    var npdma_c = GetCookie("NPDMA");
+                    var ndma_c = GetCookie("NDMA");
+                    if( ! ( npdma_c == ndma_c && '360' == ndma_c ) && location_box_market_name ) {
+                        my_market = location_box_market_name;
+                    }
+                }
+
+                    market_text = my_market.escapeHTML() + enter_to_change_location;
+
+                targetElm.html(market_text);
+                
+                var hover_text = my_market;
+
+                if (location_items[my_market]) {
+                    hover_text = location_items[my_market];
+                }
+
+                jQuery("#location-button").attr("title", hover_text);
+           //-->
+        
+
+ Open My Account menu
+
+
+Your Account
+Edit Profile
+Email & Mobile Preferences Payment Options Orders
+Print My Tickets Transfer Tickets 
+
+
+
+ 
+var is_home = '';
+if( member_name ) {
+    var user_greeting;
+
+    
+
+    if (member_name.length > 16) {
+      user_greeting = limit_with_dots( member_name, 18, {truncated: '...', full: '...'} ) + ' Account';
+    } else {
+      user_greeting = member_name + '&rsquo;s Account';
+    }
+
+    
+      jQuery('#account-button span.dd').prepend('<span class="account-name">'+user_greeting+'</span>');    
+    jQuery('#account-button').mousedown(function(event){
+        if(event.which === 1){
+            window.location = 'https://www.ticketmaster.com/member?tm_link=tm_' + is_home + 'header_name';
+        }
+    });
+    
+} else {
+      jQuery('#account-button span.dd').prepend('<span class="account-name">My Account</span>');    
+    jQuery('#account-button').mousedown(function(event){
+        if(event.which === 1){
+            window.location = 'https://www.ticketmaster.com/member?tm_link=tm_' + is_home + 'header_my_account';
+        }
+    });
+    
+}
+jQuery(document).ready(function($){ 
+    //Checking status to determine button location
+    if (check1 == null || check1.length == 0){
+        $('#account-list-options').before('<div class="padded-action bg-gradient"><a href="https://www.ticketmaster.com/member?tm_link=tm_header_signin" class="button">Sign In</a></div>');
+    } else if (check1){
+        $('#account-list-options').after('<div class="padded-action bg-gradient"><a href="https://www.ticketmaster.com/member/logout/?tm_link=tm_header_signout" class="button-secondary">Sign Out</a></div>');
+    }
+    $('#account-button').live('keyup', function(){
+        $('.padded-action').css('width',($('.padded-action').width())+'px');
+    });
+});
+ Help 
+
+
+//<![CDATA[
+{
+    var count = GetCookie("MYCART_COUNT") || 0;
+    if ( count >= 0 ) {                $('cart-button').innerHTML = [ 
+                    '<span class="ada-hide">', count, ' items in your cart</span>', 
+                ].join('');
+                if ( count > 0 ) { $('cart-button').addClassName('carted'); }
+                else { $('cart-button').removeClassName('carted'); }    }
+    else {        $$('.cart-basket-total')[0].innerHTML = '';
+    }
+    if ($('shopCart')){
+        $('shopCart').show();
+    }
+}
+//]]>
+
+ Learn more 
+
+ 
+ 
+
+ 
+
+
+.help-content h2 { margin: 0 0 1em }
+.help-content h2 ~ h2 { margin: 3em 0 1em }
+
+
+Live Nation Entertainment Privacy Policy - Your Privacy Rights
+
+Effective July 20, 2012 (last updated October 08, 2013)
+This Privacy Policy applies to the sites and apps where it appears.
+This Policy describes how we treat personal information we collect both online and offline.  This includes on our websites or in our apps. It also includes at our box offices or in phone or email interactions you have with us.  If you live in Canada, please read our Canadian Privacy Policy.
+We collect information from and about you.
+Contact information. For example, we might collect your name and street address.  We might also collect your phone number or email.
+Payment and billing information. For example, we collect your credit card number and zip code when you buy a ticket.
+Information you post. For example, we collect information you post in a public space on our website or on a third-party social media site.
+Demographic information. We may collect information about events you like or products you buy.  We might collect this as part of a survey, for example.
+Other information. If you use our website, we may collect information about the browser you're using.  We might look at what site you came from, or what site you visit when you leave us.  If you use our mobile app, we may collect your GPS location or your device's unique identifier.  We might also collect the type of mobile device you are using, or the version of the operating system your computer or device is running.  We might look at how often you use the app and where you downloaded it.
+We collect information in different ways.
+We collect information directly from you. For example, if you register for a promotion or buy tickets.  We also collect information if you post a comment on our websites or ask us a question.
+We collect information from you passively. We use tracking tools like browser cookies and web beacons.  To learn more about these tools and to control them, please click here.
+We get information about you from third parties. For example, if you use an integrated social media feature on our websites or mobile applications.  The third-party social media site will give us certain information about you.  This could include your name and email address.  Your activities on our sites and apps may be posted to the social media platforms.
+We use information as disclosed and described here.
+We use information to respond to your requests or questions. For example, we might use your information to confirm your registration for an event or contest.   If you give us your friend's information, we will only use it to provide services you requested.
+We use information to improve our products and services. We might use your information to customize your experience with us.  This could include displaying content based upon your preferences.
+We use information to look at site trends and customer interests. We may use your information to make our website and products better.  We may combine information we get from you with information about you we get from third parties.
+We use information for security purposes. We may use information to protect our company, our customers, or our websites.
+We use information for marketing purposes. For example, we might send you information about special promotions or offers.  We might also tell you about new features or products.  These might be our own offers or products, or third-party offers or products we think you might find interesting.  Or, for example, if you buy tickets from us we'll enroll you in our newsletter.  We may use push notifications and your location information on our mobile apps to send you alerts regarding local events. To learn about your choices for these communications, read the choices section below.
+We use information to send you transactional communications. For example, we might send you emails about your account or a ticket purchase.  We might also contact you about this policy or our website terms.
+We use information as otherwise permitted by law.
+We may share information with third parties.
+We will share information within the Live Nation family of companies. This may include Ticketmaster and Live Nation-owned or operated venues, for example.
+We will share information with third parties who perform services on our behalf. For example, we share information with vendors who help us manage our online registration process or who fulfill your purchases.  Some vendors may be located outside of the United States.
+We will share information with our business partners. This includes a third party who provides or sponsors an event, or who operates a venue where we hold events. Our partners use the information we give them as described in their privacy policies. You should read those polices to learn how they treat your information.
+We may share information if we think we have to in order to comply with the law or to protect ourselves. For example, we will share information to respond to a court order or subpoena.  We may also share it if a government agency or investigatory body requests.  Or, we might also share information when we are investigating potential fraud.  This might include fraud we think has happened during a sweepstakes or promotion.
+We may share information with any successor to all or part of our business. For example, if part of our business is sold we may give our customer list as part of that transaction.
+We may share your information for reasons not described in this policy. We will tell you before we do this.
+You have certain choices about how we use your information.
+You can opt out of receiving our marketing emails. To stop receiving our promotional emails, click here or follow the instructions in any promotional message you get from us.  Your device settings should provide you with instructions on how to turn off push notifications.   It may take about ten days to process your request.  Don't worry! Even if you opt out of getting marketing messages, we will still be sure to send you transactional messages.  For example, we may still contact you about your orders.
+You can modify information you have given us. To correct or delete information or update account settings, log into your account and follow the instructions.  We make changes as soon as we can.  This information may stay in our backup files.  If we cannot make the changes you want, we will let you know and explain why.  If you contact us requesting access to your information, we will respond within 30 days.
+You can control cookies and tracking tools. To learn how to manage how we - and our vendors - use cookies and other tracking tools, please click here.
+You can control tools on your mobile devices. For example, you can turn off the GPS locator or push notifications on your phone.  Each push notification has an "unsubscribe" link.
+Your California Privacy Rights.
+If you live in California and have an established business relationship with us, you can request a list of the personal information we have shared with third parties for their marketing purposes. We will also give you a list of the third parties that have received your information.  You can make a request one time each year.
+To exercise your rights, you can email us or write to us at the address below. Mention in your letter that you are making a "California Shine the Light" inquiry. We will respond within 30 days.
+These sites and apps are not intended for children.
+Our sites and apps are meant for adults. We do not knowingly collect personally identifiable information from children under 13.  If you are a parent or legal guardian and think your child under 13 has given us information, you can email us here.  You can also write to us at the address listed at the end of this policy.  Please mark your inquiries "COPPA Information Request."
+Learn more about COPPA here.
+We use standard security measures.
+We have security measures in place to protect your information. The standard security measures we use will depend on the type of information collected.  However, the Internet is not 100% secure.  We cannot promise that your use of our sites will be completely safe.  We encourage you to use caution when using the Internet.  This includes not sharing your passwords. If you think that an unauthorized account has been created using your name, contact us at the address below.
+We are TRUSTe certified.
+TRUSTe has awarded Live Nation the TRUSTe's Privacy Seal. This means TRUSTe independently reviewed this Policy and the practices on Live Nation and Ticketmaster sites and apps to make sure they meet TRUSTE's requirements.  The seal applies to our practices for information collected on U.S., UK, Ireland sites and apps.
+We keep personal information as long as it is necessary or relevant for our business.  We also keep information to resolve disputes, enforce our agreements and as otherwise required by law.
+We store information both in and outside of the United States.
+If you live outside of the United States, you understand and agree that we may transfer your information to the United States.  This site is subject to U.S. laws, which may not afford the same level of protection of those in your country.
+Live Nation complies with the U.S.-EU Safe Harbor Framework as set forth by the U.S. Department of Commerce regarding the collection, use and retention of personal information from European Union member countries. Live Nation has certified that it adheres to the Safe Harbor Privacy Principles of notice, choice, onward transfer, security, data integrity, access, and enforcement. To learn more about the Safe Harbor program, and to view Live Nation's certification, please visit http://www.export.gov/safeharbor.
+We may link to third party sites or services we don't control.
+If you click on one of those links, you will be taken to websites we do not control.  This policy does not apply to the privacy practices of those websites.  Read the privacy policy of other websites carefully.  We are not responsible for these third party sites.
+Feel free to contact us if you have more questions.
+If you have any questions about this Policy or other privacy concerns, you can email us at privacy@livenation.com. Please do not include your credit card number or other sensitive information in your email.  You can also write us at:
+Live Nation Entertainment, Inc.
+      9348 Civic Center Drive
+      Beverly Hills, CA 90210
+      Attention: Privacy Officer, Legal
+If you are not satisfied with our response, you can contact TRUSTe here.
+What we will do if there is an update to this policy.
+From time to time we may change our privacy practices.  We will notify you of any material changes to this policy as required by law.  We will also post an updated copy on our website.  Please check our site periodically for updates.
+© 2013 Live Nation Entertainment, Inc. All rights reserved.
+
+
+
+
+createNav();
+
+window.onload = function() {
+    if (TM.Ads && typeof TM.Ads.iframeAssets != "undefined" && TM.Ads.iframeAssets.length > 0){
+       jQuery.each(TM.Ads.iframeAssets, function(i,k){
+           if( jQuery( k.name ).length > 0 && k.src ){
+              if ((this.name) == "#edp_leaderboard"){
+                  this.src = appendTransID(this.src, true);
+              }
+              ( function(o){
+                   setTimeout( function() { 
+                       jQuery( o.name ).attr("src", o.src ) 
+                   } , 200 );
+               }(k) )
+           }
+       })
+    }
+}
+
+ 
+
+
+
+
+
+
+
+
+
+				.nomargin{
+					margin: 0;
+				}
+			 
+    #footerTop .frame div { margin-left: 58px;}
+    
+	.nomargin{
+		margin: 0;
+	}
+
+
+                   var omn_homepage_link = function(property) {
+                        var prop = 'TM_US: ' + property.toString();
+                        var custTrackHomepageLink = new omniCustomClick({
+                            prop14 : prop,
+                            eVar14 : prop
+                        },
+                        clickLink = prop,
+                        newPage = true
+                    );
+                    custTrackHomepageLink.handleClick();
+                };
+            
+
+Our Network
+
+Live Nation
+House of Blues TicketWeb
+TicketsNow
+Eventjoy
+NFL Ticket Exchange
+NBATICKETS.com
+NHL Ticket Exchange 
+
+
+Friends & Partners
+ 
+Sponsored by SAPExternal website. Opens in a new window
+ 
+""External website. Opens in a new window
+ American Express
+ScoreBig
+
+
+
+We're Here to Help
+
+Your Account
+Transfer or Sell Tickets
+Print Tickets
+FAQs
+Refunds and Exchanges
+Get Help
+Retail Outlets
+Custom Tickets
+
+
+ Download our Apps
+
+
+
+
+ 
+
+
+
+
+
+
+Follow us on Facebook">
+Follow us on Twitter
+Google+
+
+
+ 
+By continuing past this page, you agree to our terms of use.
+        
+ 
+
+
+Who We Are
+Blog
+Privacy Policy
+Work With Us
+Across the Globe
+Site Map
+© 1999-2015 Ticketmaster. All rights reserved.
+
+
+
+Contact information.Payment and billing information.Information you post.Demographic information.Other information.We collect information directly from you.We collect information from you passively.We get information about you from third parties.We use information to respond to your requests or questions.We use information to improve our products and services.We use information to look at site trends and customer interests.We use information for security purposes.We use information for marketing purposes.We use information to send you transactional communications.We use information as otherwise permitted by law.We will share information within the Live Nation family of companies.We will share information with third parties who perform services on our behalf.We will share information with our business partners.We may share information if we think we have to in order to comply with the law or to protect ourselves.We may share information with any successor to all or part of our business.We may share your information for reasons not described in this policy.You can opt out of receiving our marketing emails.You can modify information you have given us.You can control cookies and tracking tools.You can control tools on your mobile devices.Our NetworkFriends & PartnersWe're Here to HelpDownload our Apps

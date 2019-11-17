@@ -1,0 +1,2475 @@
+Privacy Policy - Tulsa World: Site
+
+
+<!--
+ if (typeof(TNStats_Tracker) !== 'undefined' && typeof(TNTracker) === 'undefined') { TNTracker = new TNStats_Tracker('tulsaworld.com'); TNTracker.setTrackerDomain('stats-newyork1.bloxcms.com'); TNTracker.trackPageView(); }
+// -->
+
+
+    var browser_pre_version = false;
+
+
+
+
+
+            Close
+        
+
+
+
+
+    // <![CDATA[
+        $(function(){
+            var $popover = $.Deferred()
+                .done(function(){
+                    var $i = $('#popoverAd');
+                        $i.find('.tncms-region-ads').show();
+                        $i.css({
+                            left:$(window).width()/2 - ($i.width()/2),
+                            top:($(window).height()/2) - ($i.height()/2)
+                        }).show();
+                        $i.siblings('.ui-widget-overlay').css({
+                            width: $(window).width(),
+                            height: $(document).height()
+                        }).show();
+                        $i.find('.close').bind('click',function(){
+                            $i.siblings('.ui-widget-overlay').fadeOut(750).
+                            siblings('#popoverAd').animate({left:-$i.outerWidth()}, 750, 'easeInOutBack');
+                        });
+                });
+
+            // logic for whether to load popover or not
+            var bloxAdpopover = $.cookie('blox-popover');
+            // No longer creating EMPTY cookie, so the ad can be section specific.
+                        //if (bloxAdpopover != 'EMPTY'){
+                if( $('#popoverAd .tncms-region-ads').children(':not("script")').length==0 ){
+                    //$.cookie("blox-popover", "EMPTY", {path: '/'});
+                }else{
+                    if(bloxAdpopover == null){
+                        var date = new Date();
+                        var minutes =5;
+                        date.setTime(date.getTime() + (minutes * 60 * 1000));               
+                    
+                        $.cookie("blox-popover", "wait", {path: '/', expires: date});
+                        $popover.resolve();
+                    };
+                };
+            //};
+        });
+        // ]]>
+    
+
+
+
+
+
+
+
+
+
+        <!--
+            OAS_AD('Top');
+        //-->
+        
+googletag.pubads().definePassback('/6071/BH-Media-A/BH-Media-A_leader', [728, 90]).display();
+
+
+
+
+
+
+
+
+
+
+Make us your home page
+Today's Headlines
+My Subscription
+E-edition
+Subscribe
+
+
+
+
+
+
+            Welcome! 
+        
+
+Login|Signup
+
+
+
+
+
+
+
+Logout|My Dashboard
+
+
+
+
+
+
+/*<![CDATA[*/
+// login display based on cookie
+    var sUsername = $.cookie('tncms-screenname');
+    var sDisplayname = sUsername;
+    var sAuthToken = $.cookie('tncms-authtoken');
+    var sAvatar = $.cookie('tncms-avatarurl');
+    var insertableUserName = "";
+    if(sUsername != null){insertableUserName=", <a href=\"/users/profile/"+sUsername.replace(/\+/g," ")+"\">"+sDisplayname.replace(/\+/g,"&nbsp;")+"</a>";}
+    var welcomeMessage = "Welcome back"+insertableUserName;
+
+    if ((sAuthToken == null) ) {
+        $('#post-comment').hide();
+        $('#logout-dialog').hide();
+        $('.uNavOut').hide();
+        $('.uNavReauth').remove();
+        $('.not-logged-in').show();
+
+    } else {
+        if(typeof(loggedInText)!="undefined"){if(loggedInText!=""){
+            welcomeMessage = loggedInText.replace("[USER_NAME]",insertableUserName);
+        }}
+        $('#login-dialog').hide();
+        $('.uUser').html(welcomeMessage);
+        $('.uNav').hide();
+        $('.uNavOut').show();
+        $('.uNavReauth').hide();
+
+        $('#post-comment').show();
+        $('.not-logged-in').hide();
+        $('.logged-in').show();
+    }
+    if((sAvatar!=null) && (sAuthToken!=null)){
+        if($('#customAvatar').length > 0){
+            $('#defaultAvatar').hide();
+            $('#customAvatar').show();
+        }else{
+            $('#defaultAvatar').remove();
+            $('.uIcon').each(function(index) {
+                if ($(this).children().length==0){
+                    $(this).append('<img class="custom-avatar" src="'+sAvatar+'" alt="custom avatar"/>');
+                }
+            });
+        }
+    }
+    // show panel when user info is in place
+    $('div.blox-user-panel dl').show();
+    $('.blox-loading.blox-user-panel').removeClass('blox-loading');
+// end login display based on cookie
+        function tncms_logout2() {
+            savelogoutParams();
+            oForm = document.getElementById('tncms-logout-form2');
+            oForm.submit();
+            return false;
+        }
+
+
+    function savelogoutParams() {
+        var cur_params = window.location.href.match(/\?.*/);
+        if (cur_params){
+            cur_params = cur_params.toString();
+            var orig_refer = $(".logout-form").find('input[name="referer_url"]').val();
+            if (orig_refer) orig_refer = orig_refer.toString();
+            var cur_paramsString = cur_params.replace(/[\?&]_dc=[0-9.]*/,"");
+            if (orig_refer.indexOf("?") != -1){
+                cur_paramsString = cur_paramsString.replace("?","&");
+            }
+            if (cur_paramsString){
+                var final_refer = orig_refer+cur_paramsString;
+                $(".logout-form").find('input[name="referer_url"]').val(final_refer);
+                var test_val = $(".logout-form").find('input[name="referer_url"]').val();
+            }
+        }
+    }
+/*]]>*/
+
+Contact Us
+
+
+
+
+Privacy Policy - Tulsa World: Site
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sponsored by:
+
+
+
+
+<!--
+    OAS_AD('Middle');
+//-->
+
+
+
+
+
+
+Your browser does not support iframes.
+
+
+
+
+
+
+
+
+
+News
+Sports
+Scene
+Business
+Communities
+Blogs
+Opinion
+Weekend
+Weather
+Photo
+Video
+Databases
+Obits
+Calendar
+Store
+
+
+
+Make us your home page
+Today's headlines
+Order a Page Reproduction
+Subscribe
+My Subscription
+E-edition
+Contact Us
+Join the conversation
+Register
+
+
+
+
+
+Local
+Crimewatch
+Education
+State
+U.S. & World
+Courts
+Government
+Health
+Religion
+Births
+Marriages
+Divorces
+Death Notices
+Obituaries
+Special Reports
+Databases
+Outlook 2015: Business
+World War II veterans remember
+
+
+
+
+
+COLUMNISTS
+Jay Cronley
+Ginnie Graham
+NEWS BLOGS
+View
+Weather World
+Ginnie Graham
+The God Blog
+City Hall
+
+
+
+
+
+Top Story
+
+Town hall turns into chance to air concerns, grievances against Sheriff Stanley Glanz
+Updated: 6:59 am | Comments (49)
+The meeting was held for Tulsa County residents to vent concerns regarding commissioners' approval of a contract â without comment from the public â for Glanz to retain outside counsel to challenge a petition seeking his ouster.
+
+More Headlines
+FBI, Justice Dept. take encryption concerns to Congress
+Utah teen convicted in deputy's death gets 30 years to life
+Pentagon, lawmakers mark Vietnam War at Capitol ceremony
+14 years for man in Indian scam that cost taxpayers millions
+
+
+
+
+
+
+COLLEGE SECTIONS
+OU Sooners
+OSU Cowboys
+TU Golden Hurricane
+ORU Golden Eagles
+College Football
+College Basketball
+HIGH SCHOOL FOOTBALL
+Homepage
+Preps by the Numbers
+Scoreboard
+Teams
+HIGH SCHOOL BASKETBALL
+Homepage
+Boys Preps by the Numbers
+Girls Preps by the Numbers
+Boys Scoreboard
+Girls Scoreboard
+Boys Teams
+Girls Teams
+SPORTS TV/RADIO SCHEDULE
+Today's times and channels
+OTHER SECTIONS
+Outdoors
+For The Record
+Horse Racing
+Other Sports
+
+
+
+
+
+PRO SECTIONS
+Thunder
+Shock
+Drillers
+Oilers
+Roughnecks FC
+Revolution
+MLB
+NBA
+NFL
+Golf
+Auto Racing
+SPORTS BLOGS
+Michael Peters
+John Klein
+John E. Hoover
+The Picker
+OU Sports
+OSU Sports
+TU Sports
+OKC Thunder
+High School Sports
+Pro Baseball
+Fantasy World
+The Outdoors
+
+
+
+
+
+Top Story
+
+OSU Sports: Mason Rudolph to work as counselor at Manning Passing Academy, per report
+Updated: 10:51 am
+While a future Oklahoma State quarterback shines as a camper, Cowboys starter Mason Rudolph is reportedly headed to the Manning Passing Academy this weekend to work as a camp counselor.
+
+More Headlines
+Okafor off to good summer league start with assist from Noel
+Once unheralded, Jordan Clarkson now ranks No. 12 among 2010 basketball recruits
+How OSU improves athletic performance through nutrition
+Will Russell Okung be odd-man out in Seattle Seahawks spending spree?
+
+
+
+
+
+
+Food
+Music
+Celebrations
+Movie Reviews
+Movie Showtimes
+Movie News
+TV
+Style
+A&E
+Home & Garden
+Features
+Calendar
+People & Places
+SEEN
+Comics
+Restaurant Guide
+Weddings
+Books
+
+
+
+
+
+COLUMNS
+People & Places
+Ask Amy
+Dear Pharmacist
+Ask Dr. K
+Garden Advice
+The Busy Kitchen
+SCENE BLOGS
+Offbeat
+I See Movies For Free
+Taste
+Table Talk
+ARTS
+TVtype
+POP
+Because I Said So
+Prairie Nerds
+What The Ale
+
+
+
+
+
+Top Story
+
+Tulsa's best slices: These are the ones to try for pizza lovers of all ages
+Updated: 10:53 am
+Tulsa has so many pizza options itâs a daunting task to come up with all of the best ones. The following is a list of our favorites.
+
+More Headlines
+Paramount, theaters hatch deal to trim theatrical window
+Cosby's first known accuser was no aspiring starlet
+Spike making series on computer pioneer McAfee
+Star chef Jose Andres cancels restaurant for Trump hotel
+
+
+
+
+
+
+Aerospace
+American Airlines
+Agriculture
+Consumer
+Employment
+Manufacturing
+Real Estate
+Retail
+Small Business Profiles
+Technology
+Transportation
+Energy
+Finance
+Legal notices
+Business People
+Outlook 2015: Business
+
+
+
+
+
+COLUMNS
+John Stancavage
+BUSINESS BLOGS
+Bits and Bytes
+Window Seat
+PARTNER SITE
+Tulsa Business & Legal News
+
+
+
+
+
+Top Story
+
+John Stancavage: More jobs in danger as oil heads lower
+Updated: Tue, Jul 7, 2015 8:05 pm | Comments (3)
+As the price of oil flattened at nearly $60 a barrel during the past few months, many observers began to predict the commodity was bottoming out.
+
+More Headlines
+Macy's-Bloomingdale's Fulfillment Center up and running in Tulsa County
+Paramount, theaters hatch deal to trim theatrical window
+14 years for man in Indian scam that cost taxpayers millions
+Jared raid is only Subway's latest problem
+
+
+
+
+
+Bartlesville World
+Bixby World
+Broken Arrow Ledger
+Catoosa World
+Claremore World
+Collinsville World
+Coweta American
+Glenpool World 
+Jenks World
+Owasso Reporter
+Sand Springs Leader
+Sapulpa World
+Skiatook Journal
+Wagoner Tribune
+
+
+
+
+
+OPINION SECTIONS
+Letters To The Editor
+Editorials
+Reader's Forum
+Other Voices
+COLUMNS
+Wayne Greene
+Mike Jones
+Julie DelCour
+EDITORIAL CARTOONS
+Bruce Plante
+
+
+
+
+
+Top Story
+
+Bruce Plante Cartoon: Governor Fallinâs oath
+Updated: Tue, Jul 7, 2015 7:36 pm | Comments (93)
+Buy the original or reprint of this cartoon.
+
+More Headlines
+Wall Street Journal: Stopping EPA uber alles
+Doug Shidell: Some bicyclists are jerks; Is it the Lycra?
+Jeb Bush: Don't trust Iran
+Letter to the editor: City needs to reconsider Riverside closing
+
+
+
+
+
+$("div#tw-navigation>ul.menu>a").each(function () {
+    if ($(this).find("li").attr("data-section")) {
+        $(this).addClass("has-sub");
+    }
+});
+$("div#tw-navigation>ul.menu>a.has-sub").click(function(e) {
+    var section = $(this).find("li").data("section");
+    if ($("div.sub-menu#"+section).is(":visible")) {
+    
+    }
+    else {
+            e.preventDefault();
+    }
+});
+
+if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) {
+    $('*').on('click', function() {return true;});
+}
+
+$("div#tw-navigation>ul.menu>a>li").hover(function() {
+    var section = $(this).data("section");
+    $("div.sub-menu#"+section).removeClass("hide").addClass("show");
+}, function() {
+    var section = $(this).data("section");
+    $("div.sub-menu#"+section).removeClass("show").addClass("hide");
+});
+$("div.sub-menu").hover(function() {
+    $(this).removeClass("hide").addClass("show");
+},function() {
+    $(this).removeClass("show").addClass("hide");
+});
+
+
+
+
+Free Access:
+Jobs
+Autos
+Pets
+Homes
+Classifieds
+Contests
+
+Deals
+Display Ads
+Special Sections
+Best In The World
+Legals
+Advertise
+
+
+
+
+
+
+
+  
+                <!--  
+                 OAS_AD('Top1');  
+                  //-->  
+                  
+
+
+
+    var expandoSrc = $("#tw-pencil").find("img").attr("src");
+    if (expandoSrc) {
+        if (expandoSrc.indexOf('empty.gif') != -1) {
+            $("#tw-pencil").hide();
+        }
+    }
+
+
+window.onload = function() {
+  $(".ui-dialog-title:contains('Subscription Required')").text('Would you like to have unlimited access?');
+};
+
+
+
+
+
+
+
+
+
+
+Site
+                    
+
+
+
+
+                    Privacy
+                
+
+
+
+
+
+
+Privacy Policy
+
+
+                Posted: Monday, July 22, 2013 1:37 pm | 
+                    
+Updated: Tuesday, May 5, 2015 2:51 pm.
+
+
+
+Tulsaworld.com's Privacy PolicyWelcome to Tulsaworld.com, home of the Tulsa World Online Edition. References in this Privacy Policy to Tulsaworld.com or this "Website" include the webpages that are directly accessed through the navigation bars on Tulsaworld.com which have a direct link to this Privacy Policy. There may be some webpages or sections of Tulsaworld.com which are directly accessed through the navigation bar on Tulsaworld.com which are maintained by third parties with whom we have a business relationship. These webpages may link to a separate privacy policy maintained by that third party. If you are not sure if this privacy policy applies to any webpage directly accessed through Tulsaworld.com, you should click on the privacy policy link at the bottom of the webpage, or you may contact Tulsaworld.com as set forth at the end of this policy.We understand that privacy is very important to our visitors. We want to make sure that you understand why we collect certain information, how we use it, and how we protect it. We want our guests to feel confident that their information is handled with great care.PLEASE READ THIS PRIVACY POLICY CAREFULLY. BY ACCESSING OR USING OUR WEBSITE, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTAND, AND AGREE TO BE BOUND TO ALL THE TERMS OF THIS PRIVACY POLICY AND OUR WEBSITE TERMS OF USE. IF YOU DO NOT AGREE TO THESE TERMS, EXIT THIS PAGE AD DO NOT ACCESS OR USE THE WEBSITE.This privacy policy may be modified from time to time. If we decide to change our privacy policy, we will post those changes to this privacy policy and other places we deem appropriate. We reserve the right to modify this privacy policy at any time, so please periodically review it.How do I know my information is safe on Tulsaworld.com?We collect information from our visitors for the sole purpose of improving Tulsaworld.com and providing more and better services to our visitors.The only times we will divulge a visitor's personal information to a third party are disclosed in this policy. We may also disclose information:If we believe in good faith that the law requires such disclosure.If we need to disclose the information in order to identify, contact or initiate legal action against someone violating Tulsaworld.com's Terms of Service, or someone who is causing injury to or interference with Tulsaworld.com's rights or property, other Tulsaworld.com users, or anyone else who can be harmed by such activities.In the event Tulsaworld.com contracts with an outside research firm, we may provide your contact information to the research firm to contact you regarding participation in surveys, focus groups or other research activities that will help us improve Tulsaworld.com's products and services. The research firm will be bound by its contract with Tulsaworld.com to use your information strictly for Tulsaworld.com research purposes, to keep your information confidential, and to adequately secure or destroy its records of your information when the research is complete.What information does Tulsaworld.com collect?When you register with Tulsaworld.com, we collect the following information from you:â¢Screen nameâ¢E-mail addressâ¢Name, address and telephone numberâ¢Tulsa World account numberâ¢Genderâ¢Birth dateIn addition to information obtained through registration, the Tulsa World obtains information from you when you purchase advertising or start a newspaper subscription, sign up for contests, promotions, notices, email alerts or promotional offers. This information may include, but is not limited to, your name, address, telephone number, e-mail address and what you have purchased. This information constitutes personally identifiable information.We may also use other industry standard technologies like pixel tags and web beacons to track your use of our Website pages and promotions, or we may allow our third party service providers to use these devices on our behalf. Pixel tags and web beacons are tiny graphic images placed on certain pages on our Website, or in our emails that allow us to determine whether you have performed a specific action. When you access these pages or open or click an email, pixel tags and web beacons generate a non-personally identifiable notice of that action. Pixel tags allow us to measure and improve our understanding of visitor traffic and behavior on our Website, as well as give us a way to measure our promotions and performance. We may also utilize pixel tags and web beacons provided by our affiliates and/or marketing partners for the same purposes.From time to time, Tulsaworld.com will conduct surveys on its site for research purposes. When you participate in a survey, the information you provide about yourself and your responses are collected by Tulsaworld.com. We will always inform you how we will use this information.If you contact Tulsaworld.com, we may keep a record of your correspondence.Tulsaworld.com also tracks and collects non-personally identifiable information which does not identify a specific visitor. Non-personally identifiable information may include the Uniform Resource Locator ("URL") of the website your visited before coming to our Website, the URL of the website you visit after leaving our Website, the type of browser you are using and your Internet Protocol ("IP") address. Tulsaworld.com tracks computer IP addresses to help with system administration and to compile information about traffic patterns on the site. Computer IP addresses identify computers and the networks or Internet service providers to which they are connected. We, and/or our authorized third party service providers and advertisers, may automatically collect this information when you visit our Website through the use of electronic tools like cookies and web beacons or pixel tags, as described below. We use non-personally identifiable information to troubleshoot, administer the Website, analyze trends, gather demographic information, comply with applicable law, and cooperate with law enforcement activities. We may also share this information with our authorized third party service providers and advertisers to measure the overall effectiveness of our online advertising, content, and programming.Cookies and how Tulsaworld.com uses themA cookie is a small amount of data that is transferred from a Web server through your browser and stored on the hard drive of your computer. The cookie contains your user name and password so that when you log on, the Web server recognizes you.Some advertisers on Tulsaworld.com may use their own cookies. When you click on an advertisement, visit an advertiser's Web site or make a purchase from an advertiser, that company may use cookies according to their own policies. Advertisers' cookies are not covered under Tulsaworld.com's policy. In addition, we may use third party advertising companies to display advertisements on our Website. As part of their service, they may place separate cookies on your computer. We have no access to or control over these cookies.You do not have to permit the use of cookies. You can, through the options in your Web browser, choose to accept all cookies, choose to reject all cookies or choose to receive notification when a cookie is being delivered so that you can make a decision whether to accept each cookie on a case-by-case basis. If you refuse all cookies Tulsaworld.com will no longer remember you when you return requiring you to log in each time you visit the site. Please note that if you decline or delete these cookies, some parts of the Website may not work properly.General statistical informationVisits to Tulsaworld.com are monitored to gather statistical information, including the number of visits to the site, the pages visited, which domains visitors come from and the browsers used to visit the site. This data is accumulated at the aggregate level. We may use third parties to gather, collect and report on this non-personally identifiable information.This statistical information enables us to evaluate the effectiveness of the services we provide, to monitor site performance and to make it easier for visitors to use the site.How does Tulsaworld.com use the information it gathers?Information collected on Tulsaworld.com, including traffic patterns and user behavior, is used primarily for the following purposes:Internal research. Tulsaworld.com is continuously assessing how visitors use the site. This data assists us in making decisions about how to improve the site and to better serve our users. Research data are aggregated and do not include data about specific individuals. We may share aggregated research (but not individual user information) with our advertisers or business partners. Additionally, Tulsaworld.com may use your information to contact you to ask for your participation in a focus group, survey, or some other type of research effort.To customize your experience on Tulsaworld.com. As Tulsaworld.com improves its service, it may offer users more opportunities to customize content and other aspects of the site. Information provided by you may be used to assist in the customization process, if you elect to participate in these features.To tailor advertising efforts. Most of the information and services available to you at Tulsaworld.com are free. In order to continue providing services free of charge, Tulsaworld.com sells advertising. Advertisers prefer to target their communication toward audiences who are most likely to be interested in their products. The information gathered on Tulsaworld.com helps us advise advertisers in general terms about certain aspects of site visitors (e.g. how visitors use the site, general demographic attributes of visitors, usage patterns on various parts of our site, etc.). This information helps both advertisers and Tulsaworld.com make better decisions about where to place advertising. This information may also be used to send targeted marketing, such as emails, to users that we think would be interested in such marketing. Visitors who choose to conduct financial transactions with advertisers on Tulsaworld.com may also provide specific data to those advertisers during the process of their transactions. Additionally, any information provided during the purchase of Tulsaworld.com or Tulsa World products or services will result in the collection of certain information required to complete the transaction.To use third party service providers. We provide some services and products through third parties. These third party service providers may perform functions on our behalf, like sending out and distributing promotional emails. We may share your personally identifiable information with such service providers as necessary to allow those service providers to fulfill orders, send mail or email, administer contests or sweepstakes, remove repetitive information on customer lists, analyze data, provide marketing assistance, provide search results and links, process credit card payments, operate the Website, troubleshoot, or provide customer service. We may also collect personal information from individuals and companies with whom we have business relationships ("Affiliates") and may share your information with service providers to accomplish our administrative tasks. For example, when you order a service, the third party payment processor we use releases your credit card information to the card-issuing bank to confirm payment for the service. The use of your personally identifiable information by these third parties is governed by the privacy policies of these third parties and is not subject to our control.More specifically, here is how Tulsaworld.com may use information you provide:E-mail addresses. If you supply Tulsaworld.com with your e-mail address, either by registering on the site, by communicating with us via e-mail, or signing up for promotional offers or emails, we may, from time to time, send you information that we believe would be of interest to you via e-mail. This information may be from Tulsaworld.com, the Tulsa World, or sent by us on behalf of one of our quality advertisers. Note: If we send you e-mail on behalf of another company, your personally identifiable information is not disclosed to that company unless you purchase a product or service from that company in which case it may need your information to fulfill your purchase. Rather, the company provides us with the information it wants to send, and we prepare and send the e-mail directly to you. We may use a third party service provider to manage or send emails on our behalf, but that third party is only authorized to use your information as necessary to send our email to you and it is not authorized to sell or transfer your information.Postal addresses. If you supply Tulsaworld.com with your postal address, we may send you periodic mailings with information on new products, coming events, surveys or other research materials, or other information we think might be of interest to you.Telephone numbers. If you provide your telephone number or cell phone number, Tulsaworld.com may call or text you regarding orders you have placed online, to tell you about new products, services, or coming events, or to offer other information that may interest you. Additionally, Tulsaworld.com, the Tulsa World or one of their agents may call you for research purposes.Sale transaction information. From time to time, we provide offers from our advertisers who, as part of their offer, request information on customers who purchased their offer in order to allow the advertiser to fulfill the purchase. In those cases, we share some of your personally identifiable information with that advertiser. Sharing this Information may allow that advertiser to market directly to you should it choose to do so. However, we will only share personally identifiable information with an advertiser if you provide us that information and enter into a transaction with that advertiser on or through our Website. We are not responsible or liable for the actions of such advertiser.Business transfer. We may also share your information in the case our business is sold or transferred. If this occurs, the successor company would acquire the information we maintain, including personally identifiable information.What information is covered by this privacy policy? What isn't?All information you provide directly to Tulsaworld.com is covered under this privacy policy. This information may include but is not limited to personally identifiable information such as your name, address, phone number, and e-mail address.Information that you might post on a message board, forum, or chat room is not protected under this privacy policy. Information posted in any of these public areas is not considered confidential communication. Tulsaworld.com has the right but not the obligation to monitor the content of its bulletin boards, forums and chat rooms to determine compliance with its policies and terms of use and any other operating rules established for the website. Tulsaworld.com shall have the right in its sole discretion, and without prior notice, to edit, refuse to post, or remove any materials submitted to or posted to its bulletin boards, forums, or chat rooms.Please keep in mind that whenever you voluntarily disclose information on a public website - for example, on message boards or in chat areas - that information can be collected and used by others. In short, if you post information online that is accessible to the public, you may receive unsolicited messages from other parties in return. Tulsaworld.com is not responsible for the disclosure of your information under these circumstances and such disclosure is not covered under this privacy policy.Additionally, advertisers and vendors hosted on our site, or who link to our site, may collect information about you if you visit their websites, or purchase products or services from them. Information collected by vendors or advertisers hosted on Tulsaworld.com or who link to Tulsaworld.com is not covered under this privacy policy. This privacy policy only addresses the use and disclosure of information we collect from you. Other websites that may be accessible through our Website have their own privacy policies and data collection, use and disclosure practices. If you link to any such website, we urge you review the website's privacy policy. We are not responsible for the policies or practices of third parties.Finally, you are solely responsible for maintaining the secrecy of your passwords and/or any account information. Please be careful and responsible whenever you're online.What if I don't want Tulsaworld.com to contact me?You may opt out of any or all contacts from Tulsaworld.com at any time. All e-mails sent to you from Tulsaworld.com will allow to opt out of any further e-mail from us.When you register on Tulsaworld.com, you will be given the opportunity to opt out of further communication from us.You may accept certain kinds of contact and decline others. For example, you may choose to accept e-mails, but not postal mail or telephone calls.If, at anytime in the future, Tulsaworld.com decides to use information provided by you in a way not described here, we will contact you beforehand to explain the use of the information and give you the opportunity to decline that use.Security technologiesTulsaworld.com uses industry-standard encryption technologies when transferring and receiving consumer data exchanged with our site. When we transfer or receive certain types of sensitive data, such as financial information, we will redirect you to a secure server. We have implemented appropriate security measures in our physical facilities to protect against the loss, misuse or alteration of information that we have collected from you.Unfortunately, no data transmission over the Internet or any wireless network can be guaranteed to be secure all of the time. We employ commercially reasonable security measures to protect data and seek to do business with companies which do the same, but we cannot guarantee the security of any information transmitted to or from our Website, and are not responsible for the actions of any third parties that may receive any such information.Making corrections to your informationUpon request, you may review all information that we maintain in your record, including unique identifier , contact information (name, address, phone number, e-mail), or any other information we may keep in your record.You may also request that inaccuracies be corrected in any information that we maintain in your record.Submit your request by e-mailing circulation@tulsaworld.com.Associated PressWe participate in the News Registry, a service operated by the NewsRight, LLC (NewsRight). The News Registry collects content usage information and may use cookies in conjunction with this activity. Your continued readership of the Site means you accept the privacy policy of the NewsRight News Registry. Please refer to the NewsRight News Registry privacy policy at http://www.newsregistry.com/privacycenter/servicepolicy.aspx for further information.Contacting Tulsaworld.comIf you have any questions about our privacy policy or the privacy practices of this site, please contact us at tulsaworld.com/site/contact.html.You may telephone us at (918) 582-0921. You may write to us at: Tulsa World, 315 S. Boulder Ave., Tulsa, OK 74103RefundsTulsa World will charge a $5 processing fee for refunds remitted to the customer.
+
+More pages from this section:
+
+Tulsa World - About Us
+All-Metro Team 2014
+All-World Mugs
+Connect with us
+Contact Us
+Contact the newsroom staff
+Contact Tulsa World Jobs
+Contact the Tulsa World
+Customer Service
+Follow Our Journalists
+Interns - 2014 Interns
+Invisible Kids
+Logo Guidlines
+Make tulsaworld.com your home page on your computer
+Marcus Smart
+Media Kit - Demographics
+Media Kit - Products
+Media Kit - Reach
+Media Kit - Recruitment
+Media Kit - Schedule
+Media Kit - Tutorial Videos
+Media Kit - Zones
+My Subscription
+Name your team
+OSUSportsExtra.com launches July 2
+OUSportsextra.com launches July 2
+Outlook2014
+Outlook2015
+Oklahoma Weekly Group
+Quake debate
+Tulsa World Print Subscriber Service Agreement
+Terms of Use
+Tulsa World Career Fair
+Ultimate Indoor Garage Sale 2015
+Weekend top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8
+
+
+
+
+
+
+
+
+
+  
+                <!--  
+                 OAS_AD('Right1');  
+                  //-->  
+                  
+
+
+
+      Nails by Linda - Monkey Bizness SalonOne Manicure and One Pedicure for $38 (a $75 value)      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Police: Man breaks into Berlin restaurant, drinks TabascoBERLIN (AP) â A man is in hot water after allegedly stealing a bicycle, pitching it through a Berlin restaurant window, then entering and quaffing half a bottle of Tabasco sauce â telling authorities he was thirsty.Split-colored lobster caught off Maine, 1 in 50 million findSCARBOROUGH, Maine (AP) â A rare orange-brown split-colored lobster has turned up off the coast of Maine.Oreo introducing slimmer version, but beware: They're not meant for the twist-and-dunkNEW YORK (AP) â Oreos are getting a skinny new look, and its maker says the new cookie is a "sophisticated" snack for grown-ups that isn't meant to be twisted or dunked.Rory McIlroy ruptures ligament in ankle while playing soccerLONDON (AP) â Rory McIlroy injured his left ankle while playing soccer, leaving the world's No. 1 player in doubt of defending his British Open title next week at St. Andrews.Want a national day? Check a website in North DakotaNEW YORK â To most Americans, July 4 is Independence Day. But on Marlo Andersonâs calendar, itâs also Caesar Salad Day and Barbecued Spareribs Day.
+
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', "UA-6449804-1"]);
+          
+ 
+           (function ()
+               {
+                   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                 })();
+    
+
+        window.UserIpValue = "128.2.219.194";
+    
+
+
+
+
+        FEATURED JOBS
+
+
+
+
+
+
+Attention Healthcare Professionals
+
+
+MUSCOGEE CREEK NATION HEALTH DEPARTMENT
+
+
+06.21.15Okmulgee, OK (74447)
+
+
+
+OFFICE MANAGER
+
+
+INVERNESS VILLAGE
+
+
+06.21.15Tulsa, OK (74132)
+
+
+
+FT and PRN RN Case Managers
+
+
+CIMA HOSPICE
+
+
+06.21.15Sapulpa, OK (74067)
+
+
+
+Electrical Design Engineer I and Software Design Engineer
+
+
+NAVICO, INC.
+
+
+06.21.15Tulsa, OK (74145)
+
+
+
+Medical Practice Manager/Controller
+
+
+Confidential
+
+
+06.19.15Tulsa, OK (74145)
+
+
+
+Regional Manager
+
+
+CJ'S PROFESSIONAL SATELLITES
+
+
+06.19.15Tulsa, OK (74145)
+
+
+
+Join Our Team
+
+
+Slim Chickens Restaurants
+
+
+06.13.15Tulsa, OK (74145)
+
+
+
+LPN Specialist
+
+
+University of Oklahoma Health Science Center
+
+
+06.13.15Oklahoma City, OK (73117)
+
+
+
+OFFICE MANAGER
+
+
+YWCA
+
+
+06.13.15Tulsa, OK (74145)
+
+
+
+SHOP SUPERVISOR / QUALITY CONTROL
+
+
+BRAND EXPORT PACKING
+
+
+06.12.15Tulsa, OK (74110)
+
+
+
+Technical/Customer Support Supervisor
+
+
+Confidential
+
+
+06.11.15Tulsa, OK (74145)
+
+
+
+Manager Trainee
+
+
+Spectrum Paint Company
+
+
+06.11.15Tulsa, OK
+
+
+
+Accounting Manager
+
+
+SWEP North America
+
+
+06.10.15Tulsa, OK
+
+
+
+Class A Delivery Drivers & Owner Operators
+
+
+Special Logistics, LLC
+
+
+06.09.15Tulsa, OK (74105)
+
+
+
+Focus Group Participants
+
+
+Johnson Research Consulting
+
+
+07.07.15Tulsa, OK (74105)
+
+
+
+Distribution Warehouse Manager
+
+
+American Cold Storage
+
+
+07.07.15Tulsa, OK (74145)
+
+
+
+Customer Service Representative - Insurance
+
+
+Farmers Insurance 
+
+
+07.06.15Tulsa, OK (74136)
+
+
+
+Customer Service Specialist
+
+
+UNITED RECOVERY SYSTEMS, INC.
+
+
+07.04.15Tulsa, OK (74145)
+
+
+
+DRIVERS
+
+
+WERNER ENTERPRISES
+
+
+07.04.15Tulsa, OK (74145)
+
+
+
+SALES ASSOCIATE
+
+
+INVERNESS HOME CARE AGENCY
+
+
+07.04.15Tulsa, OK (74132)
+
+
+
+CITY MANAGER
+
+
+CITY OF OKEMAH
+
+
+07.04.15Okemah, OK (74859)
+
+
+
+Jewelry Cases For Sale
+
+
+Moody's Jewelry
+
+
+06.30.15Tulsa, OK (74112)
+
+
+
+Class A Delivery Drivers & Owner Operators
+
+
+Special Logistics, LLC
+
+
+06.30.15Tulsa, OK (74105)
+
+
+
+ADVERTISING REPRESENTATIVE
+
+
+CLAREMORE PROGRESS
+
+
+06.30.15Claremore, OK (74017)
+
+
+
+LEGAL ASSISTANT
+
+
+Confidential
+
+
+06.30.15Bixby, OK (74008)
+
+
+
+WAREHOUSE ASSOCIATE
+
+
+INDUSTRIAL OILS
+
+
+06.27.15Tulsa, OK (74101)
+
+
+
+Clerical Position
+
+
+American Bank & Trust Co.
+
+
+06.27.15Tulsa, OK (74145)
+
+
+
+CREATIVE SERVICES COORDINATOR
+
+
+The Oklahoma Aquarium
+
+
+06.27.15Jenks, OK (74037)
+
+
+
+CDL-A Frac Sand Drivers
+
+
+Swaggin Wagon
+
+
+06.26.15Tulsa, OK (74116)
+
+
+
+Plant Manager
+
+
+Confidential
+
+
+06.24.15Claremore
+
+
+
+DISTRICT SALES MANAGER
+
+
+DOWNEY PUBLISHING
+
+
+06.23.15Tulsa, OK (74145)
+
+
+
+HR Generalist
+
+
+SWEP North America
+
+
+06.23.15Tulsa, OK
+
+
+
+LPN/ Paramedic
+
+
+Urgent Care of Green Country
+
+
+06.22.15Owasso, OK
+
+
+
+ 
+ 
+
+
+
+
+var rm_FeaturedJobWidgetId = 2390;
+
+
+
+
+<!--
+    OAS_AD('Position1');
+//-->
+
+googletag.pubads().definePassback('/6071/BH-Media-A/BH-Media-A_box', [300, 250]).display();
+
+
+
+  var OX_ads = OX_ads || [];
+  OX_ads.push({
+     slot_id: "538002799_INSERT_SLOT_ID_HERE",
+     auid: "538002799"
+  });
+
+
+
+
+
+Latest Local Offers
+
+1
+
+
+
+		
+		Dandi Pest Control
+	
+
+
+		20% Off 1st visit with monthly service agreement!
+
+
+
+1
+
+
+
+		
+		Video Revolution - Free TV Over the Air
+	
+
+
+		Free TV Over the Air!  Antennas starting at $199 installed.  30+ channels!
+
+
+
+1
+
+
+
+		
+		Key Personnel - Your Job Search is Over!
+	
+
+
+		Apply at Key Personnel 9717 E 42nd St, Suite 200 on Mon-Fri between 8am-3pm for these great opportunities or email resume to keyind@keyjobs.com.
+
+
+
+1
+
+
+
+		
+		McGraw Property Management - Owasso
+	
+
+
+		13151 E 80th Street North , Owasso, OK 74055.
+
+
+
+1
+
+
+
+		
+		The Blue Cottage - Schedule Today
+	
+
+
+		Schedule Your Wedding, Reception or Shower Today!
+
+
+
+
+ View more local offers
+
+
+
+
+Popular
+Commented
+
+
+
+            jQuery(document).ready(function() {
+                jQuery("#tab1").attr({"display" : "block"});
+            jQuery("#accordion div").removeClass('temp-height');
+            jQuery("#accordion h3").removeClass('hide');
+            jQuery("div#accordion").removeClass('hide');
+            jQuery("div#accordion div").removeClass('hide');
+                jQuery("#accordion .blox-list").removeClass('hide');
+            jQuery("#accordion .blox-loading").removeClass('blox-loading');
+             });
+
+                    $(function() {
+                        jQuery("#accordion").accordion({
+                autoHeight:false,
+                            header: "h3",
+                            icons: {
+                                header: "ui-icon-circle-arrow-e",
+                                headerSelected: "ui-icon-circle-arrow-s"
+                            }
+                        });
+                    });
+                    
+
+
+Stories
+
+
+Gov. Mary Fallin, monument unmoved by Supreme Court's Ten Commandments ruling
+GRDA releases names of two killed, several injured in July 4 boating accidents
+Jimmie Tramel: Blake Shelton rescued Roho â now we need more Roho
+Lone star tick linked to red-meat allergies in Oklahoma
+TVtype: Home of Subway spokesperson Jared Fogle raided Tuesday during child porn investigation
+Death Notices for July 6
+
+More
+
+
+
+Photos
+
+More
+
+
+
+Videos
+
+More
+
+
+
+
+
+
+                    $(function() {
+                        jQuery("#accordion2").accordion({
+                            autoHeight:false,
+                            header: "h3",
+                            icons: {
+                                header: "ui-icon-circle-arrow-e",
+                                headerSelected: "ui-icon-circle-arrow-s"
+                            }
+                        });
+                    });
+                
+
+
+All
+
+
+Gov. Mary Fallin, monument unmoved by Supreme Court's Ten Commandments ruling (331)
+Bruce Plante Cartoon: Governor Fallinâs oath (93)
+Letter to the editor: Offended by the rainbow flag (82)
+Letter to the editor: Same-sex marriage legal, but not right (79)
+Legislators push proposed amendment to Oklahoma Constitution to allow Ten Commandments monument (56)
+
+More
+
+
+
+
+
+
+
+
+
+no block
+no block
+
+
+No block title found.  This block may not be using the title macro from the core base library component.
+No block title found.  This block may not be using the title macro from the core base library component.
+
+
+
+    $(document).ready(function(){
+        $(function(){
+            $('#tabIncludesidebar .tabs-container li:last').after('<li class="clear"></li>');
+
+            $('#tabIncludesidebar .tab:first').addClass('active');
+            $('#tabIncludesidebar .tab:not(:first)').hide();
+            $('#tabIncludesidebar .tabs-container li a span').each(function(index){
+                var newText = $('#tabIncludesidebar .tab').eq(index).find('.blox-title h3').eq(0).text();
+                if(newText != ''){
+                    $(this).text(newText);
+                    $('#tabIncludesidebar').removeClass('empty');
+                } else {
+                    $(this).text('no block');
+                    
+                        $('#tabIncludesidebar .tab').eq(index).html('<p>No block title found.  This block may not be using the title macro from the core base library component.</p>');
+                        $(this).parents('li').hide();
+                        $('#tabIncludesidebar .tab').eq(index).hide();
+                    
+                }
+            });
+            $('#tabIncludesidebar .tabs-container a').click(function(){
+                // adjust tab states
+                $('#tabIncludesidebar .ui-tabs-selected').removeClass('ui-tabs-selected');
+                $(this).parent().addClass('ui-tabs-selected');
+
+                // activate windows
+                $('#tabIncludesidebar .tab').hide().removeClass('active');
+                t = $(this).attr('href');
+                t = t.split('#');
+                t = '#tabset_sidebar_'+t[1];
+                $(t).show().addClass('active');
+                return false;
+            });
+            
+                if(!$('#tabIncludesidebar').hasClass('empty')) $('#tabIncludesidebar').show();
+            
+        });
+    });
+    
+
+
+
+<!--
+    OAS_AD('Right2');
+//-->
+
+
+
+Featured Businesses
+
+
+
+Israel Diamond Supply
+918-248-0540
+http://www.israeldiamond.com/
+
+
+
+
+Oral Roberts University
+918-495-7072
+http://www.oru.edu
+
+
+
+
+Dong's Guns, Ammo and Reloading
+918-834-7989
+http://www.dongsguns.com/
+
+
+
+
+Your Design
+918-994-4473
+
+
+
+
+J. Miller Law Firm PLLC
+918-459-4557
+http://www.jmillerlawfirmpllc.com/
+
+
+
+Find a local business 
+
+
+I'm looking for:
+
+Located:
+Within:
+
+5 mi.
+10 mi.
+25 mi.
+50 mi.
+100 mi.
+200 mi.
+
+ of zip code: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $(".find-a-biz").click(function() {
+        $("#business-search").slideToggle(200);
+    });
+
+
+
+<!--
+    OAS_AD('Right3');
+//-->
+
+
+
+
+
+                
+                  Today's e-Edition
+                
+                      
+
+
+
+
+
+
+
+
+
+        #slideshow-adv{
+            max-width:100%;
+        }
+        .centerpiece-images img.single{
+            max-width:100%;
+        }
+        .centerpiece-images #caption-adv{
+            width:100%
+        }
+        
+    
+
+
+
+
+no block
+no block
+no block
+
+
+No block title found.  This block may not be using the title macro from the core base library component.
+No block title found.  This block may not be using the title macro from the core base library component.
+No block title found.  This block may not be using the title macro from the core base library component.
+
+
+
+    $(document).ready(function(){
+        $(function(){
+            $('#tabIncludesidebar_middle .tabs-container li:last').after('<li class="clear"></li>');
+
+            $('#tabIncludesidebar_middle .tab:first').addClass('active');
+            $('#tabIncludesidebar_middle .tab:not(:first)').hide();
+            $('#tabIncludesidebar_middle .tabs-container li a span').each(function(index){
+                var newText = $('#tabIncludesidebar_middle .tab').eq(index).find('.blox-title h3').eq(0).text();
+                if(newText != ''){
+                    $(this).text(newText);
+                    $('#tabIncludesidebar_middle').removeClass('empty');
+                } else {
+                    $(this).text('no block');
+                    
+                        $('#tabIncludesidebar_middle .tab').eq(index).html('<p>No block title found.  This block may not be using the title macro from the core base library component.</p>');
+                        $(this).parents('li').hide();
+                        $('#tabIncludesidebar_middle .tab').eq(index).hide();
+                    
+                }
+            });
+            $('#tabIncludesidebar_middle .tabs-container a').click(function(){
+                // adjust tab states
+                $('#tabIncludesidebar_middle .ui-tabs-selected').removeClass('ui-tabs-selected');
+                $(this).parent().addClass('ui-tabs-selected');
+
+                // activate windows
+                $('#tabIncludesidebar_middle .tab').hide().removeClass('active');
+                t = $(this).attr('href');
+                t = t.split('#');
+                t = '#tabset_sidebar_middle_'+t[1];
+                $(t).show().addClass('active');
+                return false;
+            });
+            
+                if(!$('#tabIncludesidebar_middle').hasClass('empty')) $('#tabIncludesidebar_middle').show();
+            
+        });
+    });
+    
+
+
+
+
+
+
+
+
+
+
+
+//Widget Config
+var WidgetConfig = new Object();
+WidgetConfig.DivID = 'XYZdivEmailSignup1545';
+WidgetConfig.ConfigurationGUID = 'DC9DB8D4-85B6-46CE-B84A-46738F2B48F4';
+WidgetConfig.Scroll = 'auto';
+//All in pixels
+WidgetConfig.Height = '460';
+WidgetConfig.Width = '300';
+//End Config
+var objWidget = CreateEmailSignupWidget(WidgetConfig);
+if (objWidget)
+{document.getElementById('XYZdivEmailSignup1545').appendChild(objWidget);}
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                  Display ads
+                
+                      
+
+
+
+
+
+        /* <![CDATA[ */
+        jQuery(document).ready(function() {
+        // Tell jQuery that our div is to be a dialog  
+            
+               jQuery(".block-259672CouponOpen0").click(function() {  
+                   jQuery("#block-259672Coupon0").dialog({ 
+                       width:320,
+                       modal: true,
+                       resizable: false
+                   });   
+            });  
+        }); 
+        /* ]]> */
+        
+
+
+
+
+
+
+
+                    Print
+                
+
+
+
+
+
+
+
+                        
+                            GALAXY DISTRIBUTING
+                        
+
+
+
+
+
+
+
+
+                        
+                            Updated:
+                                1:14 am
+                        
+                        
+
+
+
+
+
+
+
+        /* <![CDATA[ */
+        jQuery(document).ready(function() {
+        // Tell jQuery that our div is to be a dialog  
+            
+               jQuery(".block-259672CouponOpen1").click(function() {  
+                   jQuery("#block-259672Coupon1").dialog({ 
+                       width:320,
+                       modal: true,
+                       resizable: false
+                   });   
+            });  
+        }); 
+        /* ]]> */
+        
+
+
+
+
+
+
+
+                    Print
+                
+
+
+
+
+
+
+
+                        
+                            HAHN APPLIANCE
+                        
+
+
+
+
+
+
+
+
+                        
+                            Updated:
+                                1:05 am
+                        
+                        
+
+
+
+
+
+
+
+        /* <![CDATA[ */
+        jQuery(document).ready(function() {
+        // Tell jQuery that our div is to be a dialog  
+            
+               jQuery(".block-259672CouponOpen2").click(function() {  
+                   jQuery("#block-259672Coupon2").dialog({ 
+                       width:320,
+                       modal: true,
+                       resizable: false
+                   });   
+            });  
+        }); 
+        /* ]]> */
+        
+
+
+
+
+
+
+
+                    Print
+                
+
+
+
+
+
+
+
+                        
+                            TOTAL CARE MART, NSA FLEX
+                        
+
+
+
+
+
+
+
+
+                        
+                            Updated:
+                                1:07 am
+                        
+                        
+
+
+
+
+
+
+
+        /* <![CDATA[ */
+        jQuery(document).ready(function() {
+        // Tell jQuery that our div is to be a dialog  
+            
+               jQuery(".block-259672CouponOpen3").click(function() {  
+                   jQuery("#block-259672Coupon3").dialog({ 
+                       width:320,
+                       modal: true,
+                       resizable: false
+                   });   
+            });  
+        }); 
+        /* ]]> */
+        
+
+
+
+
+
+
+
+                    Print
+                
+
+
+
+
+
+
+
+                        
+                            MARC MILLER BUICK-GMC
+                        
+
+
+
+
+
+
+
+
+                        
+                            Updated:
+                                1:04 am
+                        
+                        
+
+
+
+
+
+
+
+        /* <![CDATA[ */
+        jQuery(document).ready(function() {
+        // Tell jQuery that our div is to be a dialog  
+            
+               jQuery(".block-259672CouponOpen4").click(function() {  
+                   jQuery("#block-259672Coupon4").dialog({ 
+                       width:320,
+                       modal: true,
+                       resizable: false
+                   });   
+            });  
+        }); 
+        /* ]]> */
+        
+
+
+
+
+
+
+
+                    Print
+                
+
+
+
+
+
+
+
+                        
+                            MOORE' S MEMORY FUNERAL HOME
+                        
+
+
+
+
+
+
+
+
+                        
+                            Updated:
+                                1:06 am
+                        
+                        
+
+
+
+
+
+
+
+                More Display Ads
+            
+
+
+
+
+/* <![CDATA[ */
+jQuery(document).ready(function() {
+    jQuery(".jquery-ui-button").button();
+});
+/* ]]> */
+
+
+.blox-recent-list li .avatar.cutout {
+ border: none;
+}
+
+
+
+
+
+
+
+                var _sf_async_config={};
+                /** CONFIGURATION START **/
+                _sf_async_config.uid = 26707;
+                _sf_async_config.domain = 'tulsaworld.com';
+                _sf_async_config.useCanonical = true;
+                _sf_async_config.sections = '';  //CHANGE THIS
+                _sf_async_config.authors = 'tulsaworld.com';    //CHANGE THIS
+                /** CONFIGURATION END **/
+                (function(){
+                    function loadChartbeat() {
+                        window._sf_endpt=(new Date()).getTime();
+                        var e = document.createElement('script');
+                        e.setAttribute('language', 'javascript');
+                        e.setAttribute('type', 'text/javascript');
+                        e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+                        document.body.appendChild(e);
+                    }
+
+                    var oldonload = window.onload;
+                    window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() { oldonload(); loadChartbeat(); };
+                })();
+	    
+
+
+//<![CDATA[
+    var timePartCheckCount = 0;
+    function timePartCheck()
+    {
+        if((s) && (typeof(s.getTimeParting) != "undefined"))
+        { 
+            s.pageName = "site:privacy.html";
+            s.channel = "site";
+s.prop1 = "site"
+s.prop2 = "site:privacy.html";
+s.prop3 = "site:privacy.html";
+            s.prop4 = "staticpages";
+s.prop5 = "privacy-policy";
+s.prop6 = "c9286bbe-f2fd-11e2-9809-10604b9ffe60";
+
+            s.prop7 = s.eVar3 = s.getTimeParting('h', '-7');
+            s.prop8 = s.eVar4 = s.getTimeParting('d', '-7');
+            s.prop9 = s.eVar5 = s.getTimeParting('w', '-7');
+            
+            s.t();
+        }
+	else
+	{
+            if (timePartCheckCount < 5)
+            {
+                timePartCheckCount++;
+                setTimeout(function(){timePartCheck();},1000)
+            }
+	}
+    }
+
+    timePartCheck();
+//]]>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Contact us
+tulsaworld.com
+
+
+
+Customer Service/Questions on online accounts or subscription access: 918-582-0921, 800-444-6552, circulation@tulsaworld.com
+
+
+Newsroom: 918-581-8400, news@tulsaworld.com
+
+
+Website: web@tulsaworld.com
+
+
+Place a print ad: 918-581-8510, advertsing@tulsaworld.com
+
+
+Place a digital ad: 918-581-8559, advertising@tulsaworld.com
+
+
+Place a recruitment ad: 918-732-8140, careerads@tulsaworld.com
+
+
+Place a classified ad: 918-583-2121, advertising@tulsaworld.com
+
+
+Address: 315 S. Boulder Ave.Tulsa, OK 74103
+
+
+
+
+
+Sections
+
+
+
+Home
+
+
+News
+
+
+Sports
+
+
+Business
+
+
+Scene
+
+
+Communities
+
+
+Blogs
+
+
+Opinion
+
+
+
+
+
+Sections 2
+
+
+
+Weekend
+
+
+Weather
+
+
+Photo
+
+
+Video
+
+
+Obits
+
+
+Contests
+
+
+Classifieds
+
+
+Special Reports
+
+
+
+
+
+Info
+
+
+
+About Us
+
+
+Contact Us
+
+
+Corrections
+
+
+Subscription Services
+
+
+Site Index
+
+
+Add Search Toolbar
+
+
+Privacy Policy
+
+
+Advertise
+
+
+Store
+
+
+Contractor
+
+
+Work at the Tulsa World
+
+
+Apply to be a carrier 
+
+
+
+
+
+Search
+
+
+
+
+
+
+
+
+
+Search in:
+
+
+
+
+
+
+All
+
+
+News
+
+
+Sports
+
+
+Business
+
+
+Scene
+
+
+Communities
+
+
+Blogs
+
+
+
+
+Opinion
+
+
+Weekend
+
+
+Photovideo
+
+
+Investigations
+
+
+Obituaries
+
+
+Photos
+
+
+Video
+
+
+
+
+$(document).ready(function(){
+    //$(".search-options input[type='checkbox'].checked").click();
+//all button interactions
+    var regularBox = $(".search-options input[type='checkbox'].regular");
+    var allBox = $(".search-options input[type='checkbox'].all");
+    // uncheck all option if section or type is chosen
+    $(regularBox).click(function() {
+        $(allBox).each(function(){
+            if($(this).is(':checked')){
+                this.checked = !this.checked;
+            }
+        });
+    });
+    // uncheck section and type filters if all is selected
+    $(allBox).click(function() {
+        $(regularBox).each(function(){
+            if($(this).is(':checked')){
+                this.checked = !this.checked;
+            }
+        });
+    });
+});
+
+// rework section list
+    function updateSectionListFooter() {
+        var allSectionsFooter = '';
+        var allTypesFooter = '';
+        $('#searchSectionsFooter :checked').each(function(){
+            if ($(this).val() == 'all'){
+                $('#sectionCollectionFooter').removeAttr('name');
+                $('#typeCollectionFooter').removeAttr('name');
+            }
+            else if($(this).attr('class') == 'section-box regular'){
+                $('#sectionCollectionFooter').attr('name','c[]');
+                if (allSectionsFooter == ''){
+                    allSectionsFooter = $(this).val();
+                }
+                else{
+                    allSectionsFooter += (',' + $(this).val());
+                };
+            }
+            else if($(this).attr('class') == 'type-box regular'){
+                $('#typeCollectionFooter').attr('name','t');
+                if (allTypesFooter == ''){
+                    allTypesFooter = $(this).val();
+                }
+                else{
+                    allTypesFooter += (',' + $(this).val());
+                };
+            };
+        });
+        $('#sectionCollectionFooter').val(allSectionsFooter)
+        $('#typeCollectionFooter').val(allTypesFooter)
+    }
+    $(function() {
+        $('#searchSectionsFooter input').click(updateSectionListFooter);
+        updateSectionListFooter();
+    });
+
+
+
+
+
+
+
+
+Tulsa World, Tulsa, OK Â©  2015 BH Media Group Holdings, Inc. Powered by BLOX Content Management System from TownNews.com. [Terms of Use | Privacy Policy]
+
+
+
+    $(function(){
+    // create login-box form dialog
+        $('#login-box-form-panel').dialog({
+            autoOpen: false,
+            width: 345,
+            modal: true,
+            resizable: false,
+            show: {
+                effect: 'drop',
+                direction: 'up',
+                duration: 200
+            },
+            hide: {
+                effect: 'drop',
+                direction: 'up',
+                duration: 100
+            },
+            buttons:{
+                Cancel: function(){
+                    $(this).dialog('close');
+                }
+            }
+        });
+    // open login when open-modal-login class is clicked
+        $('.open-modal-login-panel').click(function(){
+            $('#login-box-form-panel').dialog('open');
+            $("[aria-labelledby=ui-dialog-title-login-box-form-panel] .ui-dialog-buttonpane").addClass("login");
+            $("[aria-labelledby=ui-dialog-title-login-box-form-panel]").addClass("jquery-ui-edit");
+            $(".ui-dialog-buttonpane.login button:last").addClass("cancel");
+        });
+    });
+// switch to pasword forgot form
+    $('#password-reset-open-panel').click(function(){
+        $("#tncms-password-reset-form-panel").show();
+        $("#tncms-login-form-panel").hide();
+        $("#ui-dialog-title-login-box-form-panel").text("Change your password");
+    });
+// switch back to login form
+    $('#password-reset-close-panel').click(function(){
+        $("#tncms-login-form-panel").show();
+        $("#tncms-password-reset-form-panel").hide();
+        $("#ui-dialog-title-login-box-form-panel").text("Login to Tulsa World");
+    });
+// display loader when create account or openid process begins
+    $("button.openid-button, a#login-box-create-link-panel").click(function() {
+        $("#login-box-form-panel").addClass("openid-form-processing blox-loading");
+        $(".register-column, .login-column-left, .login-column-right, a#login-box-create-link-panel").hide();
+    });
+// style buttons
+    $(".jquery-ui-button").button()
+
+// validate form
+var valAuthToken = $.cookie('tncms-authtoken');
+if (valAuthToken == null){
+$(document).ready(function() {
+// validate login form fields
+    $("#tncms-login-form-panel").validate({
+        rules: {
+            username: {
+                required:true},
+            password: {
+                required:true}
+        },
+        messages: {
+            username: {
+                required:"Screen name or email address required."},
+            password: {
+                required:"Password required."}
+        }
+    });
+// validate forgot form fields
+    $("#tncms-password-reset-form-panel").validate({
+        rules: {
+            username: {
+                required:true}
+        },
+        messages: {
+            username: {
+                required:"Screen name or email address required."}
+        }
+    });
+});
+}
+
+        /* add parameters to referer URL */
+        $("#tncms-login-form-panel").submit(function() {
+        // would be nice to work logout into this too. It should work.
+            var cur_params = window.location.href.match(/\?.*/);
+            if (cur_params){
+                cur_params = cur_params.toString();
+                var orig_refer = $(this).find('input[name="referer_url"]').val();
+                if (orig_refer) orig_refer = orig_refer.toString();
+                var cur_paramsString = cur_params.replace(/[\?&]_dc=[0-9.]*/,"");
+                if (orig_refer.indexOf("?") != -1){
+                    cur_paramsString = cur_paramsString.replace("?","&");
+                }
+                if (cur_paramsString){
+                    var final_refer = orig_refer+cur_paramsString;
+                    $(this).find('input[name="referer_url"]').val(final_refer);
+                }
+            }
+        });
+    
+
+
+/* <![CDATA[ */
+jQuery(function(){
+    if(typeof(vo)!="undefined"){ if(vo.standalone.length>0){
+        fallbackPlayer = new Array();
+        fallbackPlaylist = new Array();
+        var adCounter = 0;
+        var width = 300;
+        var height = 240;
+        jQuery.each(vo.standalone,function(){
+            if(typeof(ninjaLog)!="undefined"){ninjaLog.Update({text:"Pushing Video Ad "+vo.standalone[adCounter].adId+" into #fallbackPlayer"+adCounter});}
+                
+            fallbackPlayer.push("blox-ad-"+vo.standalone[adCounter].adId+"-player");
+            fallbackPlaylist.push([vo.standalone[adCounter].playlistItem]);
+
+            fallbackPlaylist[adCounter][0].autoBuffering=true;
+            fallbackPlaylist[adCounter][0].bufferLength=1;
+
+            if(vo.standalone[adCounter].autoplay==1){
+                fallbackPlaylist[adCounter][0].autoPlay = true;
+            }
+    
+            if((typeof(vo.standalone[adCounter].width)!="undefined")&&(vo.standalone[adCounter].width!=0)){
+                width = vo.standalone[adCounter].width;
+            }
+            if((typeof(vo.standalone[adCounter].height)!="undefined")&&(vo.standalone[adCounter].height!=0)){
+                height = vo.standalone[adCounter].height;
+            }
+
+            fallbackPlaylist[adCounter][0].metadata = false;
+
+            linkItem = "<a id=\""+fallbackPlayer[adCounter]+"\" class=\"video-ad\" href=\"javascript:void(0)\" style=\"width:"+width+"px; height:"+height+"px; display:block; position:relative; z-index:1;margin:10px;\"></a>";
+            
+            // this handles the click link in the video player when clicking on the video
+            function addClickURLtoVideo(){}
+            
+            jQuery("#blox-ad-"+vo.standalone[adCounter].adId).append(linkItem);
+            flowplayer(fallbackPlayer[adCounter], "http://bloximages.newyork1.vip.townnews.com/tulsaworld.com/content/tncms/live/components/core_external_flowplayer/resources/flash/flowplayer-3.2.7.swf?_dc=1434537081",{
+                plugins:{controls:null},
+                clip:{
+                    linkUrl:vo.standalone[adCounter].videoClickUri,
+                    linkWindow:'_blank'
+                },
+                playlist:fallbackPlaylist[adCounter],
+                onPause:function(){
+                    //alert('click');
+                }
+            });
+            jQuery("#"+fallbackPlayer[adCounter]+"_api").css({"margin":"0px"});
+            
+            adCounter++;
+        });
+    } }
+});
+/* ]]> */
+
+
+        /* fix for tabs (delayed loading)*/
+        $(window).load(function() {
+            // waited until all assets loaded;
+            $('.tabset').show();
+        });
+    
+
+    var _gaq = _gaq || [];
+    $(function() {
+    
+        
+    (function() {
+        loadAddThis({
+            'addthisID': 'ra-4d90f9fb04328fb0',
+            'gaID': 'UA-2022655-1',
+            'twitterID': 'tulsaworld'
+         });
+    })();
+        
+        (function() {
+            loadFacebook({
+                'fbID': '288003941350366'
+            });
+        })();
+        
+        
+        (function() {
+            loadGoogleAnalytics({
+                trackerID: 'UA-2022655-1',
+                trackerDomain: 'www.tulsaworld.com',
+                trackerUrl: '/site/privacy.html'
+            });
+        })();
+        
+    });
+    
+
+
+
+
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-f5LbblMdUG-tM"
+});
+
+
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-f5LbblMdUG-tM.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+Login to Tulsa Worldclose
+
+
+
+
+Screen Name or Email
+
+Password
+Forgot?
+
+
+Remember me on this computer
+Login
+
+
+
+
+
+
+Screen Name or Email
+
+
+Now I remember!
+
+
+
+
+
+
+            Need an account? Create one now.
+        
+
+
+CancelTulsaworld.com's Privacy PolicyWhat information does Tulsaworld.com collect?Cookies and how Tulsaworld.com uses themGeneral statistical informationHow does Tulsaworld.com use the information it gathers?What information is covered by this privacy policy? What isn't?What if I don't want Tulsaworld.com to contact me?Security technologiesMaking corrections to your informationAssociated PressContacting Tulsaworld.comRefundsCustomer Service/Questions on online accounts or subscription access:Newsroom:Website:Place a print ad:Place a digital ad:Place a recruitment ad:Place a classified ad:Address:Tulsa World, Tulsa, OK Â©  2015 BH Media Group Holdings, Inc

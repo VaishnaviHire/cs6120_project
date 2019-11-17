@@ -1,0 +1,467 @@
+Lids.com - Help Desk - Safety, Security & Privacy
+
+$(document).ready(function() {
+      try {
+        var url = window.location.pathname;
+        var _href = url.substring(url.lastIndexOf('/') + 1);
+        var asdf = url.split('/')[2];
+        if (url.indexOf("MyAccount") > -1) {
+          $('#gendertest').css('display', 'none');
+        }
+        if (asdf == 'Gender_kids' || asdf == 'Gender_mens' || asdf == 'Gender_womens') {
+          if ($('#sidebar li .smnubrand,#sidebar li .smnuteam,#sidebar li .smnusport')) {
+            $('#sidebar li .smnubrand,#sidebar li .smnuteam,#sidebar li .smnusport').parents('#sidebar li').css('display', 'none');
+          }
+          $('#sidebar .gender').css('display', 'none');
+          var kids = url.replace(asdf, 'Gender_kids');
+          var mens = url.replace(asdf, 'Gender_mens');
+          var womens = url.replace(asdf, 'Gender_womens');
+          $('<li id="gendertest"><h2><a><span>&#187;</span>Gender</a></h2><div class="submenuwrap"><div class="submenushell smnunovelties"><ul><li id="gTestKids"><a>Kids</a></li><li id="gTestMens"><a>Mens</a></li><li id="gTestWomens"><a>Womens</a></li></ul></div></div></li>').insertBefore('#sidemenu > :first-child');
+          $("#gTestKids > a").attr("href", kids);
+          $("#gTestMens > a").attr("href", mens);
+          $("#gTestWomens > a").attr("href", womens);
+        }
+        else if (_href == 'Gender_Kids' || _href == 'Gender_Mens' || _href == 'Gender_Womens' || _href == 'Gender_kids' || _href == 'Gender_mens' || _href == 'Gender_womens') {
+          if ($('#sidebar li .smnubrand,#sidebar li .smnuteam,#sidebar li .smnusport')) {
+            $('#sidebar li .smnubrand,#sidebar li .smnuteam,#sidebar li .smnusport').parents('#sidebar li').css('display', 'none');
+          }
+          $('#sidebar .gender').css('display', 'none');
+          $('<li id="gendertest"><h2><a><span>&#187;</span>Gender</a></h2><div class="submenuwrap"><div class="submenushell smnunovelties"><ul><li id="gTestKids"><a href="Gender_Kids">Kids</a></li><li id="gTestMens"><a href="Gender_Mens">Mens</a></li><li id="gTestWomens"><a href="Gender_Womens">Womens</a></li></ul></div></div></li>').insertBefore('#sidemenu > :first-child');
+        }
+        else if (_href !== 'Gender_Kids' || _href !== 'Gender_Mens' || _href !== 'Gender_Womens' || _href !== 'Gender_kids' || _href !== 'Gender_mens' || _href !== 'Gender_womens') {
+          $('<li id="gendertest"><h2><a><span>&#187;</span>Gender</a></h2><div class="submenuwrap"><div class="submenushell smnunovelties"><ul><li id="gTestKids"><a>Kids</a></li><li id="gTestMens"><a>Mens</a></li><li id="gTestWomens"><a>Womens</a></li></ul></div></div></li>').insertBefore('#sidemenu > :first-child');
+          $("#gTestKids > a").attr("href", _href + '/Gender_Kids');
+          $("#gTestMens > a").attr("href", _href + '/Gender_Mens');
+          $("#gTestWomens > a").attr("href", _href + '/Gender_Womens');
+        }
+    if (url.indexOf("MyAccount") > -1) {
+      $('#gendertest').css('display', 'none');
+    }
+  }
+  catch (e) {
+    _satellite.notify('does not exist', 1);
+  }
+});
+
+/*T&T Metadata v3 ==>Response Plugin*/
+window.ttMETA=(typeof(window.ttMETA)!="undefined")?window.ttMETA:[];window.ttMETA.push({"CampaignName":"Shop By - Gender (Test 02)","CampaignId":"78285","RecipeName":"Gender w/out Filter","RecipeId":"2","OfferId":"170979","OfferName":"Shop By - Gender w/out Filter - Top of Menu","MboxName":"lidsglobal"});
+
+/*T&T to SiteCat v4 ==>Response Plugin*/
+window.s_tnt = window.s_tnt || '', tntVal = '78285:2:0,';
+if (window.s_tnt.indexOf(tntVal) == -1) {
+window.s_tnt += tntVal
+}
+if (mboxCurrent.getFetcher().getType() == 'ajax' && (window.s && window.s.tl)) {
+s.tl('TnT', 'o', 'TnT');
+}
+
+mboxCreate('lidsglobal', 'path='+location.pathname); 
+
+  var _caq = _caq || [];
+  (function () {
+       var ca = document.createElement("script");
+       ca.type = "text/javascript";
+       ca.async = true;
+       ca.id = "_casrc";
+       ca.src = "//t.channeladvisor.com/v2/12018275.js";
+       var ca_script = document.getElementsByTagName("script")[0];
+       ca_script.parentNode.insertBefore(ca, ca_script);
+  })();
+
+
+
+
+
+
+Sign In
+|
+My Account
+|
+Find a Store
+|
+Your Cart
+
+
+
+
+0 item(s)$0.00var miniCartUnits='0', miniCartTotal='0.00';
+
+
+
+
+
+
+
+
+
+
+
+
+Trending
+|
+LIDS Club
+|
+Custom Hats
+|
+Blank Hats
+
+
+
+
+
+MLBAmerican LeagueBaltimore OriolesBoston Red SoxChicago White SoxCleveland IndiansDetroit TigersHouston AstrosKansas City RoyalsLos Angeles Angels of AnaheimMinnesota TwinsNew York YankeesOakland AthleticsSeattle MarinersTampa Bay RaysTexas RangersToronto Blue JaysNational LeagueArizona DiamondbacksAtlanta BravesChicago CubsCincinnati RedsColorado RockiesLos Angeles DodgersMiami MarlinsMilwaukee BrewersNew York MetsPhiladelphia PhilliesPittsburgh PiratesSan Diego PadresSan Francisco GiantsSt. Louis CardinalsWashington NationalsCollectionsLids 20th Anniversary! Limited CollectionMLB All StarSan Francisco Giants Commemorative GoldKris BryantMLB New Cool Base JerseysDerek JeterNew Era ExclusivesMLB Snapback CapsMLB Authentic Collection 59FIFTYCooperstown CollectionMiLBMexican LeagueMexican Pacific LeagueHome of the AuthenticMLB Game Day GearWomen's MLBKids MLB
+NFLAFCBaltimore RavensBuffalo BillsCincinnati BengalsCleveland BrownsDenver BroncosHouston TexansIndianapolis ColtsJacksonville JaguarsKansas City ChiefsMiami DolphinsNew England PatriotsNew York JetsOakland RaidersPittsburgh SteelersSan Diego ChargersTennessee TitansNFCArizona CardinalsAtlanta FalconsCarolina PanthersChicago BearsDallas CowboysDetroit LionsGreen Bay PackersMinnesota VikingsNew Orleans SaintsNew York GiantsPhiladelphia EaglesSan Francisco 49ersSeattle SeahawksSt. Louis RamsTampa Bay BuccaneersWashington RedskinsCollectionsNFL Draft Caps and ApparelJameis Winston Buccaneers JerseysMarcus Mariota Titans JerseysSuper Bowl XLIXNFL '47 Franchise CapNFL Official On Field 59FIFTY CapsNFL JerseysHelmetsTom BradyRussell WilsonRichard ShermanBeast Mode Marshawn LynchWomen's NFLKids NFL
+NBA Eastern ConferenceAtlanta HawksBoston CelticsBrooklyn NetsCharlotte HornetsChicago BullsCleveland CavaliersDetroit PistonsIndiana PacersMiami HeatMilwaukee BucksNew York KnicksOrlando MagicPhiladelphia 76ersToronto RaptorsWashington Wizards Western ConferenceDallas MavericksDenver NuggetsGolden State WarriorsHouston RocketsLos Angeles ClippersLos Angeles LakersMemphis GrizzliesMinnesota TimberwolvesNew Orleans PelicansOklahoma City ThunderPhoenix SunsPortland Trail BlazersSacramento KingsSan Antonio SpursUtah JazzCollectionsNBA Finals ChampionsNBA Team Sale 40% OffMVP Stephen CurryLatin NightsNBA All StarNBA New Swingman JerseyLebron James Cleveland CavaliersNBA Snapback CapsNBA Throwback JerseysNBA Player T-ShirtsNBA BucketsJames HardenKevin DurantKobe BryantDerrick RoseWomen's NBAKids NBA
+NHLEastern ConferenceBoston BruinsBuffalo SabresCarolina HurricanesColumbus Blue JacketsDetroit Red WingsFlorida PanthersMontreal CanadiensNew Jersey DevilsNew York IslandersNew York RangersOttawa SenatorsPhiladelphia FlyersPittsburgh PenguinsTampa Bay LightningToronto Maple LeafsWashington CapitalsWestern ConferenceAnaheim DucksArizona CoyotesCalgary FlamesChicago BlackhawksColorado AvalancheDallas StarsEdmonton OilersLos Angeles KingsMinnesota WildNashville PredatorsSan Jose SharksSt. Louis BluesVancouver CanucksWinnipeg JetsCollectionsStanley Cup ChampionsNHL Team Sale 40% OffNHL Player T-ShirtsNHL Camo JerseysNHL JerseysWomen's NHLKids NHL
+COLLEGEACCBoston CollegeClemsonDukeFlorida StateGeorgia TechLouisvilleMiamiNorth CarolinaNorth Carolina StatePittsburghSyracuseVirginiaVirginia TechWake ForestBig 12BaylorIowa StateKansasKansas StateOklahomaOklahoma StateTCUTexasTexas TechWest VirginiaThe AmericanCincinnatiConnecticutEast CarolinaHoustonMemphisSMUSouth FloridaTempleTulaneTulsaUCFBig TenIllinoisIndianaIowaMarylandMichiganMichigan StateMinnesotaNebraskaNorthwesternOhio StatePenn StatePurdueRutgersWisconsinPac-12ArizonaArizona StateCaliforniaColoradoOregonOregon StateStanfordUCLAUSCUtahWashingtonWashington StateSECAlabamaArkansasAuburnFloridaGeorgiaKentuckyLSUMississippiMississippi StateMissouriSouth CarolinaTennesseeTexas A&MVanderbiltIndependentsArmyBrigham YoungNavyNotre Damemore schools »
+MORE SPORTSMore of Your Favorite SportsCFLFIFA World CupGreek GiftsIndyCarInternational SoccerMiLBMLSNascarWorld Baseball ClassicLIDS Team Sports
+WHATS NEW
+BRANDSOver 100 Brands to Choose Fromadidas Originalsadidas SportBLVDBrowningCaliforniaDC-ComicsDC ShoesDGKDiamondDopeFoxHOOeyHurleyJordanKangolLIDS Private LabelLRGMajesticMarvelMelinMetal MulishaMitchell and NessNew EraNikeNike ActionNike GolfNo Bad IdeasOakleyOfficialPumaReebokRVCASalt LifeTop of the WorldTravis MathewUnder ArmourVolcomYea.NiceYoung And RecklessYUMSZephyr'47more brands »
+ACCESSORIESMore Great ProductsBackpacks & PursesCap Care KitCap BrushCap Collector 15Headband & WristbandsHeadwear AccessoriesiPhone CasesSunglassesWalletsWater And Stain Repellent
+CLEARANCE
+
+
+
+Help Desk - Safety, Security and Privacy
+
+
+Privacy Policy
+Last updated: August 26, 2014
+Our Commitment to Privacy
+Hat World values your time, respects your privacy, and seeks to earn your trust.
+We collect information about you in our stores and through the Sites (lids.com, lids.ca and hatworld.com) in an effort to improve your shopping experience and to tell you about our products,
+services, contests and promotions. Your trust is essential to us, and we are not in the business of selling or renting information about our customers to others. As described in this policy, we may share
+your information among our brands and, under certain circumstances, with third parties that provide services on our behalf or with whom we have partnered to offer a particular product or service.
+In line with these values, our privacy policy may change from time to time. If it does, we will post an updated policy on the Sites and change the "last updated" line above. If we make significant changes to
+the policy, we will provide appropriate notice to you.
+If you have any unanswered questions about our privacy policy, click here to reach our Privacy Officer.
+What kind of personal information does Hat World collect?
+We may collect personal information from you, such as your name, email address, postal address, phone number, purchase history, credit card number, gender, birthday, and personal interests, when you visit
+one of the Sites or stores, place an order online or by phone, make an in-store purchase, save your information with us online, return an item to a store, contact us with a question or concern, participate
+in a contest, promotion, or survey, or communicate with us in any other way.
+We may occasionally collect an individual's IP address to help identify an individual, gather broad demographic information about users of the Sites, diagnose problems with our systems, and administer the
+Sites.
+How does Hat World collect this information?
+We receive and store any information from your visits to our Sites or that you give us in any other way.
+As is true of most web sites, we gather and store certain information automatically, including Internet Protocol (IP) addresses, browser types, Internet Service Provider (ISP), referring/exit pages,
+operating system, date/time stamp, and click stream data. This information does not identify individual users, and is used to analyze trends, to administer the site, to track users' movements around the site
+and to gather demographic information about our user base as a whole.
+To do this, we use 'cookies' or alphanumeric identifiers that we transfer to your computer's hard drive through your web browser to enable our systems to recognize your browser and to provide features such
+as storage of items in your Shopping Cart between visits. We use a third-party service provider to serve ads on our behalf across the Internet and sometimes on the Sites. This provider may collect anonymous
+information about your visits to the Sites and may also use information about your visits to this and other Web sites to refine our services. If you are concerned about cookies, the "help", "options" or
+"preferences" functions on most browsers will allow to limit or disable cookies altogether. However, cookies allow you to take full advantage of our interactive features, and we recommend that you leave them
+turned on.
+Currently, our Sites do not respond to "Do Not Track" signals from your browser.
+We may also collect anonymous information about your interactions with us through the use of pixel tags (also called "web beacons" or "clear gifs"), which are tiny graphic images on the Sites and in our
+emails. Pixel tags are now standard in the industry and help to us analyze our customers' online behavior and measure the effectiveness of our Sites and our advertising. A third-party service provider also
+helps us in our use of these tools.
+To ensure we are sending our emails to the right address, we may receive a confirmation when you open email from us if your computer supports such capabilities.
+Last, to provide customer service, we might receive information about you from other sources and add it to our account information. We also sometimes receive address information from these sources to correct
+our records and deliver your next purchase or communication more easily.
+Any personal information that we collect will be stored in secure servers hosted in the U.S. or Canada. We will correct such information whenever possible and delete stale information on an ongoing basis and
+are very happy to hear from you to ensure that our information is as complete and accurate as possible.
+How does Hat World use your personal information?
+The information we learn from customers helps us personalize and improve your shopping experience. In particular, by using the Sites, you agree that we may use your personal information in the following
+ways:
+
+To process and fulfill your order, including sending you email to confirm your order status and shipment.
+To communicate with you, to send you information about our products, services, contests, and promotions, and to send offers to selected groups of customers on behalf of other businesses. When we send
+you offer on behalf of other businesses, we never give that business your name and address. If you do not wish to receive such offers, please let us know, and we will place you on a "do not contact" list.
+To administer contests and other promotions.
+To help us learn more about your shopping preferences so that we can customize future shopping for you, improve our stores, and tailor offers and promotions to you.
+To help us address problems with and improve our site design, products and services.
+To enhance your shopping experience.
+To administer our loyalty programs.
+To process merchandise returns.
+To analyze trends and statistics.
+To correct our records and make it easier to deliver your next purchase or communication more easily.
+To protect the security and integrity of the Sites and our business.
+To respond to your requests and to contact you if necessary.
+For customer service purposes, such as contacting customers who have not checked out to follow up on abandoned shopping carts or to see if there was a problem with their use of our Sites.
+
+If you have questions or concerns about how we use personal information, please contact us as indicated below.
+Does Hat World share personal information about me?
+By using the Sites, you agree that we may share your personal information in the following ways:
+
+When you provide personal information to one of our retail stores or affiliates, we may share that information with our other retail stores or affiliates in the United States or Canada.
+We may share information about you with our service providers who manage our customer information and perform services on our behalf, such as fulfilling promotions, sending communications to our
+customers, validating addresses, and conducting surveys.
+We may share information about you when we team up with another company to offer or provide products, services, contests, or promotions to our customers.
+We may share personal information about you to address a security, integrity, or legal threat to the Sites or our business, including for fraud protection and credit risk reduction, to protect the legal
+rights, privacy or safety of Hat World or our employees, agents and contractors, to enforce our terms of use, to respond to inquiries or requests from government or public authorities in any country in which
+we operate, including the U.S. and Canada, or to comply with the law or legal process.
+
+We employ other companies and individuals as agents to perform functions on our behalf. Examples include delivering packages, sending postal mail and email, removing repetitive information from customer
+lists, analyzing data, providing marketing assistance, processing credit card payments, and providing customer service.
+Whenever we share personal information with our agents, we restrict their access to only that information needed to perform their functions, demand that they provide a comparable level of protection for
+personal information, and require that they not use it for other purposes.
+In addition, if you choose to participate in any loyalty program in which Hat World participates, such as LIDS Club, and you authorize Hat World to provide information about purchases you make to the company
+administering the program, we will share personal information about you with that company. Loyalty programs allow you to obtain discounts on purchases at our stores, special member-only offers, and VIP
+access to new product releases and the hottest trends. The information you authorize us to disclose may include your credit card number and the date and amount of your purchase, and may also include your
+name and other information you have asked us to provide. Please note that once we disclose this information, the company administering the loyalty program may use and share it with others in accordance with
+its own privacy policy. You should review these policies carefully, as we have no control over them.
+How does Hat World keep your information secure?
+Hat World is always striving to ensure you a safe and convenient online experience. This goes beyond our technologies to include physical, contractual, and managerial safeguards to protect your personal
+information.
+We work to protect the security of your information during transmission by using Thawte Certified Secure Sockets Layer (SSL) software, which encrypts information you input. We reveal only the last four
+digits of your credit card numbers when confirming an order. Of course, we transmit the entire credit card number to the appropriate credit card company during order processing.
+Security lies in your hands as well. It is important for you to protect against unauthorized access to your password and to your computer. Be sure to sign off when finished using a shared computer. In the
+event of unauthorized use of your credit card, you must notify your credit card provider in accordance with its reporting rules and procedures.
+What is "phishing"?
+"Phishing" is a scam where fraudsters pretend that they represent well-known companies to steal your personal information. If you receive an email claiming to be from Hat World that asks you for your
+personal information, do not respond. We will never request your password, user name, credit card information or other personal information through email.
+How do I access or change my personal information?
+You can access, add or update certain information in the "My Account" section of the Sites, including order tracking and account information. When you update information, your old information is replaced by
+your new information.
+You can ask us to change or update other personal information about you by clicking here to reach our Privacy Officer. Any request to update personal information may take up to 10 days for your email
+request and 6-8 weeks for your postal mail request.
+You can unsubscribe or change your subscription to any of our Personal Notification Services at any time.
+How can I control your use of my personal information?
+We want to communicate with you only if you want to hear from us. If you prefer not to receive promotional information from one or more of our brands, please let us know by making a written request to our
+Privacy Officer.
+In any such request, please provide us with your full name and the email address you used when you registered with or made a purchase from us. If you ask us to remove your name and address from promotional
+lists, we will maintain your name in a "do not contact" file to ensure that we can honor your request. It may take up to 10 days to process your email request and 6-8 weeks to process your postal mail
+request, during which transition period you may continue to receive communications from us.
+To change your mind, simply contact our Privacy Officer or sign up again when you visit the Sites or our stores.
+If you have questions or concerns about how we use personal information about you or if you would prefer that we delete or suppress information we have about you, please click here to reach our Privacy
+Officer, and we will do our best to meet your concerns.
+How does Hat World protect kids' privacy?
+Hat World is concerned about the privacy and safety of children when they use the Internet. We will never knowingly request personally identifiable information online from anyone under the age of 13 without
+prior verifiable parental consent. The Sites are general audience sites and are not targeted to or intended for use by children.
+To carry this promise through, we do not sell products for purchase by children. We sell children's products for purchase by adults. If you are under 18, you may use the Sites only with involvement of a
+parent or guardian.
+What about links to other web sites?
+The Sites may contain links to third-party web sites. All such sites are independent from the Sites and from Hat World. Hat World has no control over and expressly disclaims any liability for such sites or
+their contents. Our links do not constitute an express or implied adoption or endorsement of anything contained in the other sites. Any transactions that take place between you and the third party are
+directly with the third party and Hat World will not be held responsible for any loss or damage that you may incur as a consequence thereto. Please read the privacy policies and terms and conditions posted
+on these other sites before using the sites or disclosing any personal information to the sites. If you decide to access any of these sites, you do so entirely at your own risk.
+Your California Privacy Rights
+California Civil Code Section 1798.83 permits customers of Hat World who are California residents to request certain information regarding our disclosure of personal information to third parties for their
+direct marketing purposes. To make such a request, please click here to reach our Privacy Officer.
+How do I contact you?
+To reach us with any questions or requests about customer care or our privacy policy, you can contact us by email, telephone, or postal mail:
+
+US & CANADA
+Hat World
+Attn: Privacy Officer
+7555 Woodland Dr
+Indianapolis, IN 46278
+1-888-564-4287
+Privacy Officer
+
+
+
+Safety, Security & Privacy
+
+Safe Shopping Guarantee
+Privacy Policy
+Terms & Conditions
+Mobile Terms & Conditions
+
+
+« Main HelpDesk Menu
+
+
+
+
+
+
+
+FIND US
+
+Store Locator
+LIDS Outlet
+LIDS.ca
+LIDS Team Sports
+  Equipment
+  Closeout
+
+
+
+MY ACCOUNT
+
+My Account
+Wish List
+Track Order
+LIDS Club
+Gift Cards
+
+
+
+LIDS COMMUNITY
+
+LIDS on Instagram 
+LIDS on Facebook 
+LIDS on Twitter 
+LIDS on Google + 
+LIDS on Pinterest 
+LIDS on YouTube 
+LIDS Email Sign Up 
+LIDS Blog 
+
+
+
+ABOUT LIDS
+
+Company Info
+Career Opportunities
+Affiliate Program
+Safe Shopping Guarantee
+Media Library
+Hat Science
+LIDS Foundation
+20th Anniversary
+
+
+
+CUSTOMER SUPPORT
+
+Help Center
+Contact Us
+Shipping / Returns / APO/FPO
+ENG - 888.564.4287
+ESP - 866.791.0118
+International Ordering
+
+
+Chat directly with a member of our support team.
+
+
+
+
+
+
+© 2015 LIDS, Genesco.  All Rights Reserved  Privacy Policy  Terms & Conditions  Site Map
+
+
+
+
+  $.getScript('//static.atgsvcs.com/js/atgsvcs.js',function(){
+    ATGSvcs.setEEID('200106296993');
+    ATGSvcs.ESTARA_HOST = 'as00.estara.com';
+  });
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24443076-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+amc.on('load',function(event,data){s.pageName='help desk : safety, security and privacy'; s.prop1='Support'; var s_code=s.t(); if(s_code)document.write(s_code);});
+
+
+  var _mTrack = _mTrack || [];
+  _mTrack.push(['trackPage']);
+
+  (function() {
+    var mClientId = '787kig22579';
+    var mProto = ('https:' == document.location.protocol ? 'https://' : 'http://');
+    var mHost = 'tracker.marinsm.com';
+    var mt = document.createElement('script'); mt.type = 'text/javascript'; mt.async = true; mt.src = mProto + mHost + '/tracker/async/' + mClientId + '.js';
+    var fscr = document.getElementsByTagName('script')[0]; fscr.parentNode.insertBefore(mt, fscr);
+  })();
+
+<img src="https://tracker.marinsm.com/tp?act=1&cid=787kig22579&script=no" >
+
+
+(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '236135103248313']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+
+<img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=236135103248313&amp;ev=NoScript" />
+
+
+
+
+  /* <![CDATA[ */
+  var google_conversion_id = 990707235;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+
+<img height="1" width="1" border="0" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/990707235/?frame=0&random=1435871084949&cv=7&fst=1435871084949&num=1&fmt=1&guid=ON&eid=42631044&u_h=800&u_w=1280&u_ah=777&u_aw=1280&u_cd=24&u_his=2&u_tz=-240&u_java=true&u_nplug=6&u_nmime=8&frm=0&url=http%3A//www.lids.com/HelpDesk/Security/PrivacyPolicy&vis=1" />
+
+  <div style="display:inline;">
+  <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/990707235/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+
+
+
+
+  /* <![CDATA[ */
+  var google_conversion_id = 988832306;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+/* ]]> */
+
+
+
+  <div style="display:inline;">
+  <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/988832306/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+
+
+
+
+  /* <![CDATA[ */
+  var google_conversion_id = 967476555;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+/* ]]> */
+
+
+
+  <div style="display:inline;">
+  <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/967476555/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+
+
+
+
+(function(){"use strict";var e=null,b="4.0.0",
+n="10795",
+additional="",
+t,r,i;try{t=top.document.referer!==""?encodeURIComponent(top.document.referrer.substring(0,2048)):""}catch(o){t=document.referrer!==null?document.referrer.toString().substring(0,2048):""}try{r=window&&window.top&&document.location&&window.top.location===document.location?document.location:window&&window.top&&window.top.location&&""!==window.top.location?window.top.location:document.location}catch(u){r=document.location}try{i=parent.location.href!==""?encodeURIComponent(parent.location.href.toString().substring(0,2048)):""}catch(a){try{i=r!==null?encodeURIComponent(r.toString().substring(0,2048)):""}catch(f){i=""}}var l,c=document.createElement("script"),h=null,p=document.getElementsByTagName("script"),d=Number(p.length)-1,v=document.getElementsByTagName("script")[d];if(typeof l==="undefined"){l=Math.floor(Math.random()*1e17)}h="dx.steelhousemedia.com/spx?"+"dxver="+b+"&shaid="+n+"&tdr="+t+"&plh="+i+"&cb="+l+additional;c.type="text/javascript";c.src=("https:"===document.location.protocol?"https://":"http://")+h;v.parentNode.insertBefore(c,v)})()
+
+
+
+
+twttr.conversion.trackPid('l5vdx',
+{ tw_sale_amount: 0, tw_order_quantity: 0 }
+);
+
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l5vdx&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l5vdx&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+
+(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '504855813011562']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+
+<img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=504855813011562&amp;ev=PixelInitialized" />
+Our Commitment to PrivacyWhat kind of personal information does Hat World collect?How does Hat World collect this information?How does Hat World use your personal information?Does Hat World share personal information about me?How does Hat World keep your information secure?What is "phishing"?How do I access or change my personal information?How can I control your use of my personal information?How does Hat World protect kids' privacy?What about links to other web sites?Your California Privacy RightsHow do I contact you?US & CANADA

@@ -1,0 +1,454 @@
+
+	Community Coffee - Terms of Use and Privacy
+
+
+(window.jQuery)||document.write('<script src="/bundles/jquery"><\/script>');
+
+(window.jQuery.ui)||document.write('<script src="/bundles/jqueryui"><\/script>');
+
+
+
+
+
+
+
+
+
+
+
+
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+
+
+
+
+
+
+
+
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl06', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+
+
+
+//<![CDATA[
+Sys.Application.setServerId("ctl06", "ctl00$ctl06");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+
+
+                
+                (function (window) {
+                    var WebAPIUrls = {
+                        WebAPIAddToBasket: '/api/basket/addtobasket',
+                        WebAPICategoryRoute: '/api/category/-id-',
+                        WebAPIAddItemToCoffeeClub: '/api/basket/coffeeclub/additem',
+                        WebAPIShippingMethodsGet: '/api/shippingmethods',
+                        AddPromoCode: '/api/checkout/addpromocode',
+                        ShippingAddresses: '/api/address/getShippingAddresses',
+                        WebAPIGetBasketCount: '/api/basket/getItemsCount',
+                        WebAPIGetBasket: '/api/basket',
+                        GetOrder: '/api/order?orderNumber=-orderNumber-'
+                    };
+                    window.WebAPIHelper = new window.WebAPIHelperFunc(WebAPIUrls);
+                    window.GoogleEcommerceTrackingId = 'UA-2146539-1';
+
+                })(window);
+
+                $(function () {
+                    SetAjaxLoader();
+                    $.get("/api/basket/getItemsCount", function (data) {
+                        $('a.cart').text(data);
+                    });
+                });
+
+                //To handle 401 unauthorized returned from ajax calls. 
+                jq110.ajaxPrefilter(function (options, originalOptions, jqXHR) {
+
+                    // save the original error callback for later
+                    if (originalOptions.error)
+                        originalOptions._error = originalOptions.error;
+
+                    // overwrite *current request* error callback
+                    options.error = $.noop();
+
+                    // setup our own deferred object to also support promises that are only invoked
+                    // once all of the retry attempts have been exhausted
+                    var dfd = $.Deferred();
+                    jqXHR.done(dfd.resolve);
+
+                    // if the request fails, do something else yet still resolve
+                    jqXHR.fail(function () {
+                        var args = Array.prototype.slice.call(arguments);
+
+                        if (jqXHR.status === 401) {
+                            window.location.href = '/login';
+                        } else {
+                            // add our _error callback to our promise object
+                            if (originalOptions._error)
+                                dfd.fail(originalOptions._error);
+                            dfd.rejectWith(jqXHR, args);
+                        }
+                    });
+
+                    // NOW override the jqXHR's promise functions with our deferred
+                    return dfd.promise(jqXHR);
+                });
+            
+10% off + free shipping on orders of $30 or more (promo: july10)
+
+
+
+
+
+
+
+0
+
+
+
+
+
+
+Heritage
+
+
+
+Our Story
+
+
+
+Family
+
+
+
+Values
+
+
+
+
+
+Quality
+
+
+
+Technique
+
+
+
+Experts
+
+
+
+Farms
+
+
+
+
+
+Connections
+
+
+
+Stories
+
+
+
+People
+
+
+
+Giving Back
+
+
+
+Connect
+
+
+
+Donations
+
+
+
+Testimonials
+
+
+
+Webisode Series
+
+
+
+
+
+Products
+
+
+
+Coffee
+
+
+
+Single-Serve
+
+
+
+Tea
+
+
+
+More
+
+
+
+Business Express
+
+
+
+
+
+
+
+
+        $(function () {
+            $.get("/api/useraccount/isloggedin", function (data) {
+                if (data == true) {
+                    $('#LoginLogout').prop('title', 'Logout');
+                    $('#LoginLogout').text('Logout');
+                    $('#MyAccount').show();
+                } else {
+                    $('#MyAccount').hide();
+                }
+            });
+
+            $('#LoginLogout').click(function () {
+                $('#MyAccount').hide();
+                $.get("/api/useraccount/isloggedin", function (data) {
+                    if (data == true) {
+                        $.post("/api/useraccount/logout", function() {
+                            $('#LoginLogout').prop('title', 'Login');
+                            $('#LoginLogout').text('Login');
+                            window.location.replace("/login/");
+                        });
+                    } else {
+                        window.location.replace("/login/");
+                    }
+
+                });
+            });
+        });
+
+Login
+My Account
+Contact
+Careers
+For Business
+
+
+      
+
+
+
+
+
+
+
+Terms of Use  PLEASE READ THESE TERMS OF USE CAREFULLY.  BY USING THIS WEBSITE (THIS âSITEâ), YOU SIGNIFY YOUR AGREEMENT TO THESE TERMS OF USE. IF YOU DO NOT AGREE TO THESE TERMS OF USE, YOU MAY NOT USE THIS SITE. THIS SITE IS NOT INTENDED FOR USE BY PERSONS UNDER THE AGE OF 18. 1. INTELLECTUAL PROPERTY All information, content, photographs, and materials contained on this website are the copyrighted property of Community Coffee Company, L.L.C. or its subsidiaries and affiliated companies (collectively, âCCCâ), or the copyrighted property of the company's licensors or licensees.  All trademarks, service marks, design marks, logos, slogans, trade names, and other source identifiers are the proprietary property of CCC.  The use of any copyrighted materials, trademarks or service marks without CCC's express written consent is strictly prohibited.  You may not use our trademarks or service marks in any manner that is likely to cause confusion or dilute our trademarks.  You may not use our trademarks or service marks in any manner that disparages or tarnishes the products offered or services rendered by CCC, that disparages or discredits CCC, that harms the company's reputation, or that in any way harms the goodwill in the trademarks, service marks or company.     2. SUBMISSIONS Please do not send us any unsolicited materials such as ideas, concepts, data, text, files, images, pitches, suggestions, stories, screenplays, treatments, formats, artwork, photographs, drawings, videos, audiovisual works, musical compositions (including lyrics), sound recordings, program formats, characterizations, and/or other similar materials ("Unsolicited Submissions"). If, despite our request, you intentionally or unintentionally send us Unsolicited Submissions, we shall be entitled to unrestricted use of such Unsolicited Submissions for any purpose whatsoever, commercial or otherwise, including, but not limited to, reproduction, disclosure, transmission, publication, broadcasting, distribution or posting, without the requirement of any permission from or payment to you or to any other person or entity. No Unsolicited Submission shall be subject to any obligation of confidentiality on our part and we shall not be liable for any use or disclosure of any Submission.   3. PUBLIC FORUMS AND COMMUNICATION "Public Forum" means an area, site or feature offered as part of the Site that enables users or visitors to (a) submit, post, display and/or view user-generated content and/or (b) to communicate, share or exchange user-generated content with other users, visitors and members of the general public.  You acknowledge that anything you submit to the Site by way of any Public Forum may be routed through our servers, the servers of one or more third parties on our behalf and the Internet, and may be viewed on the Internet by the general public and that, therefore, you have no expectation of privacy with regard to any such submission. You acknowledge that Public Forums and features offered therein are for public and not private communications.  We cannot guarantee the security of any information you disclose through any of these media and you make such disclosures at your own risk. We reserve the right to screen, refuse to post, remove or edit User-Generated Content at any time and for any or no reason in our absolute and sole discretion without prior notice, although we have no duty to do so or to monitor any Public Forum.   4. USE RESTRICTIONS The following is a list of Restrictions applicable to the Site. By using the Site, you agree that:
+You will not submit, post, upload, distribute, or otherwise make available or transmit any content or material that: (a) is defamatory, abusive, harassing, insulting, threatening, or that could be deemed to be stalking or constitute an invasion of a right of privacy of another person; (b) is bigoted, hateful, or racially or otherwise offensive; (c) is violent, vulgar, obscene, pornographic or otherwise sexually explicit; (d) is illegal or encourages or advocates illegal activity or the discussion of illegal activities with the intent to commit them; or (e) infringes or violates any right of a third party or any domestic or international law, rule or regulation including, but not limited to:(i) copyright, patent, trademark, trade secret or other proprietary or contractual rights; (ii) right of privacy (specifically, you must not distribute another person's personal information of any kind without their express permission) or publicity; or (iii) any confidentiality obligation.
+You represent that you own or have the necessary rights, licenses, consents and permissions, without the need for any permission from or payment to any other person or entity, to use, and to authorize us to use, distribute or otherwise exploit in all manners permitted by these terms of use, all copyrights, trademarks, patents, trade secrets, privacy and publicity rights (including, without limitation, names, likenesses and voices) and/or other proprietary rights contained in any content that you submit, post, upload, distribute or otherwise make available or transmit.
+You will not advertise or sell any of our products, services or otherwise (whether or not for profit).
+You will not submit, post, upload, distribute, or otherwise make available or transmit any software or other computer files that contain a virus or other harmful component, or otherwise impair or damage the Site or any connected network, or otherwise interfere with any person or entity's use or enjoyment of the Site;
+You will not engage in antisocial, disruptive, or destructive acts, including "flaming," "spamming," "flooding," "trolling," and "griefing" as those terms are commonly understood and used on the Internet;
+You will not delete any legal notices, disclaimers or proprietary notices such as copyright or trademark symbols, or modify any logos that you do not own or have express permission to modify;
+You will not engage in (or attempt to engage in) any criminal activity.
+We cannot and do not assure that other users are or will be complying with the foregoing Restrictions or any other provisions of these terms of use, and, as between you and us, you hereby assume all risk of harm or injury resulting from any such lack of compliance.
+  5. OUR CONTENT REMOVAL RIGHTS We reserve the right, but disclaim any obligation or responsibility, to (a) remove any user-submitted content at any time and (b) comply with any subpoena, order or otherwise cooperate with law enforcement officials regarding the identification of any user alleged to be using the Site in violation of the law. If we deem appropriate in our sole discretion, we reserve the right to preserve a record of any such user-generated content and turn all or a portion thereof over to law enforcement officials.   6. CONTENT LINKED TO THE SITE You should be aware that when you are on the Site, you could be directed to other sites that are beyond our control. There are links to other sites from pages on the Site that take you outside of our service. For example, if you click on a promotion, resource or a search result, the click may take you off the Site. You acknowledge that when you click on a link that leaves the Site, the site you will land on is not controlled by us and different terms of use and privacy policy may apply. By clicking on links to other sites, you acknowledge that we are not responsible for those sites. We reserve the right to disable links from third-party sites to the Site, although we are under no obligation to do so.  We make no representations concerning the content of sites linked to us in any way. Consequently, it is your sole responsibility to comply with the appropriate terms of service and privacy policies of the linked sites as well as with any other obligation under copyright, secrecy, defamation, decency, privacy, security and export laws related to the use of such linked sites and any content contained thereon.  7. DISCLAIMER THE INFORMATION, CONTENT AND MATERIALS ON THE SITE ARE PROVIDED "AS IS" AND WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMISSIBLE PURSUANT TO APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. WE DO NOT WARRANT THAT THE FUNCTIONS CONTAINED IN INFORMATION, CONTENT AND MATERIALS ON THE SITE (INCLUDING, WITHOUT LIMITATION, USER-GENERATED CONTENT) WILL BE UNINTERRUPTED OR ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT THE SITE OR THE SERVERS THAT MAKE SUCH INFORMATION, CONTENT AND MATERIALS AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. YOU HEREBY IRREVOCABLY WAIVE ANY CLAIM AGAINST US WITH RESPECT TO INFORMATION, CONTENT AND MATERIALS CONTAINED ON OUR SITES (INCLUDING, WITHOUT LIMITATION, USER-GENERATED CONTENT), ON THIRD PARTY SITES, AND ANY INFORMATION, CONTENT AND MATERIALS YOU PROVIDE TO SUCH THIRD PARTY SITES (INCLUDING, WITHOUT LIMITATION, CREDIT CARD AND OTHER PERSONAL INFORMATION). WE STRONGLY ENCOURAGE YOU TO MAKE WHATEVER INVESTIGATION YOU FEEL NECESSARY OR APPROPRIATE BEFORE PROCEEDING WITH ANY ONLINE OR OFFLINE TRANSACTION WITH ANY OF THESE THIRD PARTIES.  8. INDEMNIFICATION You hereby agree to indemnify, defend, and hold us, our licensors, licensees, distributors, agents, representatives and other authorized users, and all of the foregoing entities' respective officers, directors, owners, employees, agents, representatives and assigns (collectively, the "Indemnified Parties") harmless from and against any and all losses, damages, liabilities and costs (including, without limitation, attorneysâ fees and other legal fees and expenses for investigating or defending any actions or threatened actions) incurred by the Indemnified Parties in connection with (a) your use of the Site, (b) your breach of these terms of use or claims arising from your account(s), (c) any content you provide, (d) your violation of the rights of another or your conduct in connection with the Site.   9. LIMITATION OF LIABILITY UNDER NO CIRCUMSTANCES, INCLUDING, BUT NOT LIMITED TO, NEGLIGENCE, SHALL WE BE LIABLE TO YOU OR ANY OTHER PERSON OR ENTITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, PUNITIVE, SPECIAL OR CONSEQUENTIAL DAMAGES INCLUDING, WITHOUT LIMITATION, LOST PROFITS, PRODUCTS LIABILITY, PERSONAL INJURY (INCLUDING DEATH) AND PROPERTY DAMAGE OF ANY NATURE WHATSOEVER, THAT RESULT FROM (A) THE USE OF, OR THE INABILITY TO USE, THE SITE OR CONTENT, MATERIALS OR FUNCTIONS ON THE SITE, OR (B) THE CONDUCT OR ACTIONS, WHETHER ONLINE OR OFFLINE, OF ANY USER OF THE SITE OR ANY OTHER PERSON OR ENTITY, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN NO EVENT SHALL OUR AGGREGATE LIABILITY TO YOU FOR ALL DAMAGES, LOSSES AND CAUSES OF ACTION WHETHER IN CONTRACT, TORT (INCLUDING, BUT NOT LIMITED TO, NEGLIGENCE) OR OTHERWISE EXCEED THE AMOUNT PAID BY YOU, IF ANY, FOR ACCESSING OR PARTICIPATING IN ANY ACTIVITY RELATED TO THE SITE.  YOU FURTHER ACKNOWLEDGE AND AGREE THAT NEITHER WE OUR LICENSORS AND LICENSEES, NOR ANY OF THE FOREGOING ENTITIES' RESPECTIVE RESELLERS, DISTRIBUTORS, SERVICE PROVIDERS AND SUPPLIERS ARE RESPONSIBLE OR LIABLE FOR (A) ANY INCOMPATIBILITY BETWEEN THE SITES AND ANY WEB SITE, SERVICE, SOFTWARE OR HARDWARE OR (B) ANY DELAYS OR FAILURES YOU MAY EXPERIENCE WITH ANY TRANSMISSIONS OR TRANSACTIONS RELATING TO THE SITES IN AN ACCURATE OR TIMELY MANNER. THE LIMITATIONS, EXCLUSIONS AND DISCLAIMERS IN THIS SECTION AND ELSEWHERE IN THESE TERMS OF USE APPLY TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW. APPLICABLE LAW MAY NOT ALLOW THE LIMITATION OR THE EXCLUSION, LIMITATION, OR DISCLAIMER LIABILITY FOR THE CERTAIN PROVISIONS SET FORTH IN THESE TERMS OF USE, SO SUCH EXCLUSIONS, LIMITATIONS OR DISCLAIMERS MAY NOT APPLY TO YOU.  10. JURISDICTIONAL AND VENUE ISSUES You agree that any action at law or in equity arising out of or relating to these terms of use shall be filed, and that venue properly lies, only in state or federal courts located in Baton Rouge, Louisiana and you hereby consent and submit to the personal jurisdiction of such courts for the purposes of litigating any such action. We make no representation that information, content or materials on the CCC Site are appropriate or available for use in any particular location. Those who choose to access the Site do so on their own initiative and are responsible for compliance with all applicable laws including, but not limited to, any applicable local laws.   11. AMENDMENT We reserve the right, in our sole discretion, to change, modify, add or delete portions of these terms of use at any time without notice, and it is your responsibility to review these terms of use for any changes. Your use of the Site following any amendment of these terms of use will signify and constitute your assent to and acceptance of such revised terms of use.   12. TERMINATION These terms of use are effective until terminated by us.  We may terminate your access to the Site without cause and without notice to you in our sole discretion.    13. GENERAL PROVISIONS These terms of use shall be governed by and construed in accordance with the laws of the State of Louisiana and the laws of the United States, without giving effect to any principles of conflicts of law. If any provision of these terms of use shall be unlawful, void or for any reason unenforceable, then that provision shall be deemed severable from these terms of use and shall not affect the validity and enforceability of any remaining provisions. No waiver of any provision of these terms of use by us shall be deemed a further or continuing waiver of such provision or any other provision, and our failure to assert any right or provision under these terms of use shall not constitute a waiver of such right or provision.      14. PRIVACY POLICY Use of the Site is also governed by our Privacy Policy. For further information about how the Site uses information collected from you, please review our privacy policy.   15. EFFECTIVE DATE These terms of use are effective and were last updated on January 13, 2015.   Â© 2015 Community Coffee Company   Privacy Statement  Our commitment to protecting your privacy Community Coffee Company respects your right to privacy and is committed to protecting it. In our site, we give you opportunities to provide your name, address, email and other relevant information that we use to give you a more personalized shopping experience and to make ordering and reordering easier for you. We do not sell or trade customer information with others for use on their mailing lists.   The protection of your personal account information When you place an order on our site, it is placed through a secure server. This server encrypts all information you input before it is sent. Once your personal information is received, we protect it against unauthorized use.   The use of cookies Cookies are alphanumeric identifiers which collect anonymous browsing data that enables us to recognize your browser and provide convenience features such as the storing of items in your Shopping Cart and the personalization of content based on your preferences. You can learn how to de-activate cookies using the Help feature of your browser, but we recommend that you leave them turned on in order to enjoy all the value-added features of this website.   
+
+
+
+
+
+
+
+
+
+
+ Heritage Our Story Family Values 
+
+
+
+
+ Quality Technique Experts Farms 
+
+
+
+
+ Connections Stories People Giving Back Donations Testimonials 
+
+
+
+
+ Products Coffee Single-Serve Tea More Business Express 
+
+
+
+Contact Us | FAQ | Refer a Friend | For Business | Cash For Schools  | Military Match  Press Center  | Careers  | Employees  | Terms of Use | Site Map | Summer Giveaway Rules Twitter Facebook Youtube Â© 2015 Community Coffee Company  
+twttr.conversion.trackPid('l56cs');
+
+setTimeout(function(){var a=document.createElement("script"); var b=document.getElementsByTagName("script")[0]; a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0022/0323.js?"+Math.floor(new Date().getTime()/3600000); a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l56cs&p_id=Twitter" /> <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l56cs&p_id=Twitter" />
+
+    (function ($) {
+        //
+        if (!($('.order-success').length)) {
+            var an = document.createElement("script");
+            an.async = !0,
+            an.src = "//ad.atdmt.com/m/a.js;m=11217200780861;cache=" +Math.random() + "?order_id=&qty=&revenue=&extended_data=";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(an, s);
+        }
+    })(jq110);
+
+
+    <iframe frameborder='0' scrolling='no' marginheight='0' marginwidth='0' topmargin='0' leftmargin='0' allowtransparency='true' style='display:none;' src='http://ad.atdmt.com/m/a.html;m=11217200780861;noscript=1?order_id=&qty=&revenue=&extended_data='></iframe>
+
+
+    var __cho__ = { "pid": 3797, "puid2": "6f76fad5-7669-4f3d-8bec-e538605dee78", "data":{} };
+
+
+    if(location.pathname.indexOf('/products')>-1)
+    {
+        var segments = location.pathname.split('/');
+        if(segments.length>=2 && segments[2] != null)
+        {
+            __cho__.data.pc = segments[2].toLowerCase();
+
+            var productDetail = $('.product-detail');
+            if(productDetail.length==1)
+            {
+                __cho__.data.pt = 'product detail';
+
+                __cho__.data.na = productDetail.find('[itemprop="name"]').attr('content');
+                __cho__.data["product_name"] = __cho__.na;
+                __cho__.data.op = productDetail.find('[itemprop="price"]').attr('content');
+                __cho__.data.sku = productDetail.find('[itemprop="sku"]').attr('content');
+            }
+            else
+            {
+                __cho__.data.pt = 'category';
+            }
+        }
+    }
+
+    (function () {
+        var c = document.createElement('script');
+        c.type = 'text/javascript';
+        c.async = !0;
+        c.src = document.location.protocol + '//cc.chango.com/static/o.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(c, s);
+    })();
+
+
+
+
+
+ Your browser is out-of-date!
+Update your browser to view this website correctly. Update my browser now 
+Ã
+
+function addLoadEvent(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+      window.onload = func;
+    } else {
+      window.onload = function() {
+        oldonload();
+        func();
+      }
+    }
+  }
+  // Call Outdated Browser
+  addLoadEvent(
+    outdatedBrowser({
+      bgColor: '#f25648',
+      color: '#ffffff',
+      lowerThan: 'IE9',
+      languagePath: '/Sitefinity/WebsiteTemplates/CommunityCoffee/App_Themes/CommunityCoffee/JS/vendor/outdatedbrowser/lang/en.html'
+    })
+  );
+
+//<![CDATA[
+;(function() {
+                        function loadHandler() {
+                            var hf = $get('ctl07_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Sitefinity.Resources, Version=7.0.5100.0, Culture=neutral, PublicKeyToken=null:en-US:a6635f48-e22f-44c2-8ae2-67269b80c83c:83fa35c7:850288ef:7a90d6a';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();//]]>
+
+var _kmq = _kmq || [];
+var _kmk = _kmk || '8ca48d0ae82cf4e03b9e36206cb94c9727732fee';
+function _kms(u){
+  setTimeout(function(){
+    var d = document, f = d.getElementsByTagName('script')[0],
+    s = d.createElement('script');
+    s.type = 'text/javascript'; s.async = true; s.src = u;
+    f.parentNode.insertBefore(s, f);
+  }, 1);
+}
+_kms('//i.kissmetrics.com/i.js');
+_kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+ var isMobile = function() {
+    return (navigator.userAgent.match(/Android/i) ||
+            navigator.userAgent.match(/BlackBerry/i) ||
+            navigator.userAgent.match(/iPhone|iPod/i) ||
+            navigator.userAgent.match(/iPad/i) ||
+            navigator.userAgent.match(/Opera Mini/i) ||
+            navigator.userAgent.match(/IEMobile/i) );
+};
+
+if (isMobile()) _kmq.push(['set', {'Mobile Session' : 'Yes' }]);
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2146539-1', 'auto');
+  ga('send', 'pageview');
+  ga('require', 'ecommerce');   // Load the ecommerce plug-in.
+
+
+
+
+/* <![CDATA[ */
+var google_conversion_id = 1042130399;
+var google_conversion_label = "-DnTCK-ZnBUQ38v28AM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+
+
+<img height="1" width="1" border="0" alt="" src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/1042130399/?frame=0&random=1436370449408&cv=7&fst=1436370449408&num=1&fmt=1&label=-DnTCK-ZnBUQ38v28AM&guid=ON&eid=42631043&u_h=800&u_w=1280&u_ah=777&u_aw=1280&u_cd=24&u_his=4&u_tz=-240&u_java=true&u_nplug=6&u_nmime=8&frm=0&url=http%3A//www.communitycoffee.com/termsofuse&ref=http%3A//www.communitycoffee.com/&vis=1" />
+
+_kmq.push(['set', {'Screen Resolution' : screen.width + " x " +
+  screen.height }]);
+
+window.viewportUnitsBuggyfill.init();
+
+
+HeritageQualityConnectionsProducts

@@ -1,0 +1,1660 @@
+Privacy Policy | Washingtonian
+
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '244251412284157', // App ID
+      channelUrl : '//www.washingtonian.com/channel.php', // Channel File
+      status: true, cookie: true, xfbml: true
+    });
+  };
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=244251412284157";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+
+
+    $(document).ready(function() {
+      $('#top-header #other-links li').click(function(){
+        $(this).addClass('hover');
+      });
+        
+      $('#other-links li div.courtesy-drop').mouseleave(function(){
+        $(this).parent().removeClass('hover');
+      });
+    });
+  
+
+
+
+
+
+
+
+Magazine Login 
+
+Read This Month's Issue
+
+Desktop Edition
+Read a replica of this month's magazine on your computer. It's free for print subscribers.
+                Read Now
+
+iPad Edition
+
+                Read a digital version of this month's magazine on your iPad. It's free for print subscribers.
+                Download Now
+
+
+Subscriber services
+
+                Manage your subscription, make payments, renew, change your address and more.
+                Login
+
+
+
+
+
+Website Login 
+
+Sign in to Washingtonian.com
+
+                A Washingtonian.com account will allow you to manage services offered through our website.
+                
+Go to Member Login Page
+Create a New Account
+
+
+
+
+ Subscribe
+Advertise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Food & Drink
+
+
+100 Best Restaurants
+Best Bites Blog
+Cheap Eats
+Dirt Cheap Eats
+
+
+Great Bars
+Happy Hour Finder
+Kliman Online
+Restaurant Finder
+
+ 
+
+Health
+
+
+Ask the Experts
+Top Dentists
+Top Doctors
+Spas
+Well+Being Blog
+
+
+
+Homes
+
+
+Home Design
+Home & Garden Database
+Open House Blog
+Automotive
+
+
+
+People & Politics
+
+
+Capital Comment Blog
+Sports
+Dead Drop Blog
+Washington Voices
+
+
+
+Style
+
+
+Shop Around Blog
+Spas
+Find a Spa
+
+
+
+Travel
+
+
+Great Getaways Blog
+Hotel Finder
+Weekend Trips
+
+
+
+Where & When
+
+
+After Hours Blog
+Events Calendar
+Happy Hour Finder
+Great Bars
+
+
+
+Weddings
+
+
+Bride & Groom Blog
+Wedding Vendors
+
+
+
+Work & Family
+
+
+MOM
+Pets
+Financial Planners
+Private School Guides
+Great Places to Work
+
+
+
+
+ 
+
+
+
+
+
+
+
+Real Estate
+Neighborhood Guides
+Visitors Guide
+Best of Washington
+Top Doctors
+Top Lawyers
+Bars
+Restaurants
+Events
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Building Museum's 'Beach' Is as Fun and Ridiculous as It Sounds
+Go for a swim in a million plastic balls.
+The Racing Presidents as You've Never Seen Them Before
+See George, Abe, Teddy, and Bill experience the best of what DC has to offer.
+The Ridiculous, Bloody, Scientifically Questionable History of Shark Week
+How a goofy summertime stunt landed Discovery at the top of the television food chain.
+Best Cheap Restaurants in Washington, DC
+Great places to feast for under $25.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+  function changeSuperFinder(el) {
+    idlist = ['1', '2', '3', '4', '5', '6', '7'];
+    selid = el[el.selectedIndex].value;
+    var block_set = 0;
+    var i;
+    var j;
+    for (i=1; i <= idlist.length; i++) {
+      elid = 'superfinder_' + i;
+      formid = 'superfinder_' + i + '_form';
+      for (j = 0; j <= idlist.length; j++) {
+        selectorelement = document.getElementById(formid)['SuperFinderSelector'][i-1];
+        selectorelement.selected = false;
+      }
+      if (i == selid) {
+        document.getElementById(elid).style.display='block';
+        document.getElementById(formid)['SuperFinderSelector'][i-1].selected = true;
+        block_set = 1;
+      }
+      else {
+        document.getElementById(elid).style.display='none';
+      }
+    }
+  }
+
+
+
+
+
+Find A ...
+
+
+
+Home, Restaurant, etc...
+Restaurant
+Where & When / Event
+Happy Hour
+Spa
+Home
+Hotel
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Find A Restaurant
+
+
+
+Home, Restaurant, etc...
+Restaurant
+Where & When / Event
+Happy Hour
+Spa
+Home
+Hotel
+ 
+
+Search by Name
+
+
+
+
+Select Neighborhood
+
+
+All Neighborhoods
+District of Columbia
+     Adams Morgan
+     Brookland
+     Capitol Hill
+     Capitol Hill, National Mall
+     Capitol Hill, Northeast
+     Capitol Hill, Southeast
+     Capitol Hill, Southwest/Waterfront
+     Cleveland Park
+     Columbia Heights
+     Downtown
+     Dupont Circle
+     Foggy Bottom/West End
+     Georgetown
+     Georgia Ave./Petworth/Takoma DC
+     Glover Park
+     H Street NE
+     Logan Circle
+     Mt. Pleasant/Columbia Heights
+     Palisades
+     Penn Quarter/Chinatown
+     Petworth
+     Southeast
+     U Street/Shaw
+     Upper Northwest
+     Woodley Park
+Maryland
+     Annapolis
+     Baltimore
+     Beltsville
+     Bethesda/Glen Echo
+     Bladensburg
+     Bowie
+     Brookeville
+     Bryan's Road
+     Burtonsville
+     Carroll County
+     Chevy Chase
+     Clinton
+     College Park
+     Columbia
+     Crownsville
+     Damascus
+     Easton
+     Ellicott City
+     Fort Washington
+     Frederick
+     Fulton
+     Gaithersburg
+     Germantown
+     Glen Burnie
+     Grasonville
+     Greenbelt
+     Hagerstown
+     Hyattsville
+     Kensington/Garrett Park
+     La Plata
+     Landover
+     Langley Park
+     Largo
+     Laurel
+     Maple Lawn
+     Mitchellville
+     National Harbor
+     Northern Montgomery County
+     Olney
+     Potomac/Cabin John
+     Rockville
+     Seabrook
+     Silver Spring/Takoma Park
+     Southern PG County
+     Stevensville
+     Tenleytown/Friendship Heights
+     Waldorf
+     Wheaton
+Virginia
+     Alexandria
+     Alexandria, Del Ray
+     Alexandria, Old Town 
+     Annandale
+     Arlington
+     Arlington, Ballston
+     Arlington, Clarendon/Courthouse
+     Arlington, Crystal City/Pentagon City
+     Arlington, Rosslyn
+     Arlington, Shirlington
+     Arlington, South 
+     Ashburn
+     Baileys Crossroads
+     Barboursville
+     Bristow
+     Chantilly/Centreville/Clifton
+     Culpeper
+     Fairfax
+     Falls Church
+     Flint Hill
+     Fredericksburg
+     Front Royal
+     Great Falls
+     Leesburg
+     Leon
+     Little Washington
+     Lovettsville
+     Manassas
+     McLean/Tysons Corner
+     Mclean
+     Middleburg
+     Reston/Herndon
+     Round Hill
+     Shenandoah Valley
+     Springfield
+     Sterling
+     The Plains
+     Upperville
+     Vienna
+     Warrenton
+     Winchester-Frederick
+     Woodbridge
+
+
+
+Select Price
+
+
+All Price Ranges
+Inexpensive
+Moderate
+Expensive
+Very Expensive
+
+
+
+Select Cuisine
+
+
+All Cuisines
+Afghan
+American
+Argentinian
+Barbecue
+Belgian
+Breakfast
+Burmese
+Cajun/Creole
+Cantonese
+Caribbean
+Chinese
+Cuban
+Deli/Quick Bites
+Dim Sum
+Diner
+English/Irish/Scottish
+Ethiopian
+French
+Fusion/Eclectic
+German/Austrian
+Greek/Mediterranean
+Grocery Store/Market
+Indian
+Italian
+Japanese
+Kenyan
+Korean
+Laotian
+Lebanese
+Malaysian/Indonesian
+Mexican
+Middle Eastern
+Modern
+Moroccan
+Nuevo Latino
+Pan-Asian
+Peruvian
+Pizza
+Russian/E. European
+Salvadoran
+Sandwiches
+Scandinavian
+Seafood
+Soul Food
+South American
+Southern
+Spanish/Portuguese
+Steaks
+Sushi
+Szechuan
+Tapas/Small Plates
+Tex-Mex
+Thai
+Turkish
+Vegetarian/Vegan
+Vietnamese
+West African
+
+
+
+Select Star Rating
+
+
+All Star Ratings
+4.0 Stars
+3.5 Stars Only
+3.0 Stars Only
+2.5 Stars Only
+2.0 Stars Only
+1.5 Stars Only
+1.0 Star Only
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Find Events
+
+
+
+Home, Restaurant, etc...
+Restaurant
+Where & When / Event
+Happy Hour
+Spa
+Home
+Hotel
+ 
+
+Search by Event Name
+
+
+
+
+Event Type
+
+
+All Types
+Arts
+Benefits
+Books
+Comedy
+Dance
+Editor's Pick
+Fashion & Shopping
+Festival
+Film
+Food & Wine
+Football
+Health/Fitness
+Kid-Friendly
+Lecture/Talk
+Miscellaneous
+Museum Exhibits
+Music
+Race
+Shopping
+Sports
+Theater
+User Contributed
+Awards
+
+
+
+Search day
+
+
+Today
+Thursday, Jul. 09
+Friday, Jul. 10
+Saturday, Jul. 11
+Sunday, Jul. 12
+Monday, Jul. 13
+Tuesday, Jul. 14
+Any Future Date 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Find A Happy Hour
+
+
+
+Home, Restaurant, etc...
+Restaurant
+Where & When / Event
+Happy Hour
+Spa
+Home
+Hotel
+ 
+
+Search by Name
+
+
+
+
+Neighborhood
+
+
+All Neighborhoods
+District of Columbia
+     Adams Morgan
+     Brookland
+     Capitol Hill
+     Capitol Hill, National Mall
+     Capitol Hill, Northeast
+     Capitol Hill, Southeast
+     Capitol Hill, Southwest/Waterfront
+     Cleveland Park
+     Columbia Heights
+     Downtown
+     Dupont Circle
+     Foggy Bottom/West End
+     Georgetown
+     Georgia Ave./Petworth/Takoma DC
+     Glover Park
+     H Street NE
+     Logan Circle
+     Mt. Pleasant/Columbia Heights
+     Palisades
+     Penn Quarter/Chinatown
+     Petworth
+     Southeast
+     U Street/Shaw
+     Upper Northwest
+     Woodley Park
+Maryland
+     Annapolis
+     Baltimore
+     Beltsville
+     Bethesda/Glen Echo
+     Bladensburg
+     Bowie
+     Brookeville
+     Bryan's Road
+     Burtonsville
+     Carroll County
+     Chevy Chase
+     Clinton
+     College Park
+     Columbia
+     Crownsville
+     Damascus
+     Easton
+     Ellicott City
+     Fort Washington
+     Frederick
+     Fulton
+     Gaithersburg
+     Germantown
+     Glen Burnie
+     Grasonville
+     Greenbelt
+     Hagerstown
+     Hyattsville
+     Kensington/Garrett Park
+     La Plata
+     Landover
+     Langley Park
+     Largo
+     Laurel
+     Maple Lawn
+     Mitchellville
+     National Harbor
+     Northern Montgomery County
+     Olney
+     Potomac/Cabin John
+     Rockville
+     Seabrook
+     Silver Spring/Takoma Park
+     Southern PG County
+     Stevensville
+     Tenleytown/Friendship Heights
+     Waldorf
+     Wheaton
+Virginia
+     Alexandria
+     Alexandria, Del Ray
+     Alexandria, Old Town 
+     Annandale
+     Arlington
+     Arlington, Ballston
+     Arlington, Clarendon/Courthouse
+     Arlington, Crystal City/Pentagon City
+     Arlington, Rosslyn
+     Arlington, Shirlington
+     Arlington, South 
+     Ashburn
+     Baileys Crossroads
+     Barboursville
+     Bristow
+     Chantilly/Centreville/Clifton
+     Culpeper
+     Fairfax
+     Falls Church
+     Flint Hill
+     Fredericksburg
+     Front Royal
+     Great Falls
+     Leesburg
+     Leon
+     Little Washington
+     Lovettsville
+     Manassas
+     McLean/Tysons Corner
+     Mclean
+     Middleburg
+     Reston/Herndon
+     Round Hill
+     Shenandoah Valley
+     Springfield
+     Sterling
+     The Plains
+     Upperville
+     Vienna
+     Warrenton
+     Winchester-Frederick
+     Woodbridge
+
+
+
+Scene
+
+
+All Scenes
+Billiards
+Food Specials
+Low-key
+Outdoor Seating
+Sportsbar
+Upscale
+
+
+
+Day of the Week
+
+
+All Days
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Find A Spa
+
+
+
+Home, Restaurant, etc...
+Restaurant
+Where & When / Event
+Happy Hour
+Spa
+Home
+Hotel
+ 
+
+Neighborhood
+
+
+All Neighborhoods
+District of Columbia
+     Adams Morgan
+     Brookland
+     Capitol Hill
+     Capitol Hill, National Mall
+     Capitol Hill, Northeast
+     Capitol Hill, Southeast
+     Capitol Hill, Southwest/Waterfront
+     Cleveland Park
+     Columbia Heights
+     Downtown
+     Dupont Circle
+     Foggy Bottom/West End
+     Georgetown
+     Georgia Ave./Petworth/Takoma DC
+     Glover Park
+     H Street NE
+     Logan Circle
+     Mt. Pleasant/Columbia Heights
+     Palisades
+     Penn Quarter/Chinatown
+     Petworth
+     Southeast
+     U Street/Shaw
+     Upper Northwest
+     Woodley Park
+Maryland
+     Annapolis
+     Baltimore
+     Beltsville
+     Bethesda/Glen Echo
+     Bladensburg
+     Bowie
+     Brookeville
+     Bryan's Road
+     Burtonsville
+     Carroll County
+     Chevy Chase
+     Clinton
+     College Park
+     Columbia
+     Crownsville
+     Damascus
+     Easton
+     Ellicott City
+     Fort Washington
+     Frederick
+     Fulton
+     Gaithersburg
+     Germantown
+     Glen Burnie
+     Grasonville
+     Greenbelt
+     Hagerstown
+     Hyattsville
+     Kensington/Garrett Park
+     La Plata
+     Landover
+     Langley Park
+     Largo
+     Laurel
+     Maple Lawn
+     Mitchellville
+     National Harbor
+     Northern Montgomery County
+     Olney
+     Potomac/Cabin John
+     Rockville
+     Seabrook
+     Silver Spring/Takoma Park
+     Southern PG County
+     Stevensville
+     Tenleytown/Friendship Heights
+     Waldorf
+     Wheaton
+Virginia
+     Alexandria
+     Alexandria, Del Ray
+     Alexandria, Old Town 
+     Annandale
+     Arlington
+     Arlington, Ballston
+     Arlington, Clarendon/Courthouse
+     Arlington, Crystal City/Pentagon City
+     Arlington, Rosslyn
+     Arlington, Shirlington
+     Arlington, South 
+     Ashburn
+     Baileys Crossroads
+     Barboursville
+     Bristow
+     Chantilly/Centreville/Clifton
+     Culpeper
+     Fairfax
+     Falls Church
+     Flint Hill
+     Fredericksburg
+     Front Royal
+     Great Falls
+     Leesburg
+     Leon
+     Little Washington
+     Lovettsville
+     Manassas
+     McLean/Tysons Corner
+     Mclean
+     Middleburg
+     Reston/Herndon
+     Round Hill
+     Shenandoah Valley
+     Springfield
+     Sterling
+     The Plains
+     Upperville
+     Vienna
+     Warrenton
+     Winchester-Frederick
+     Woodbridge
+
+
+
+Atmosphere / Type
+
+
+All Atmospheres/Types
+Casual
+European
+Hotel
+Luxury
+Mall Store
+Medical Spa
+Modern
+Weekend Spa
+
+
+
+Keyword
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Find a Home
+
+
+
+Home, Restaurant, etc...
+Restaurant
+Where & When / Event
+Happy Hour
+Spa
+Home
+Hotel
+ 
+
+Location
+
+
+
+
+
+Bedrooms
+
+
+Select
+1 Bedroom
+2 Bedrooms
+3 Bedrooms
+4 Bedrooms
+5 Bedrooms
+6 Bedrooms
+
+
+
+Bathrooms
+
+
+Select
+1 Bathroom
+2 Bathrooms
+3 Bathrooms
+4 Bathrooms
+5 Bathrooms
+6 Bathrooms
+
+
+
+Min. Price:
+
+
+Select
+100,000
+125,000
+150,000
+175,000
+200,000
+225,000
+250,000
+275,000
+300,000
+325,000
+350,000
+375,000
+400,000
+425,000
+450,000
+475,000
+500,000
+550,000
+600,000
+650,000
+700,000
+750,000
+800,000
+850,000
+900,000
+950,000
+1,000,000
+1,250,000
+1,500,000
+1,750,000
+2,000,000
+2,250,000
+2,500,000
+2,750,000
+3,000,000
+3,250,000
+3,500,000
+3,750,000
+4,000,000
+4,250,000
+4,500,000
+4,750,000
+5,000,000
+6,000,000
+7,000,000
+8,000,000
+9,000,000
+10,000,000
+
+
+
+Max. Price:
+
+
+Select
+100,000
+125,000
+150,000
+175,000
+200,000
+225,000
+250,000
+275,000
+300,000
+325,000
+350,000
+375,000
+400,000
+425,000
+450,000
+475,000
+500,000
+550,000
+600,000
+650,000
+700,000
+750,000
+800,000
+850,000
+900,000
+950,000
+1,000,000
+1,250,000
+1,500,000
+1,750,000
+2,000,000
+2,250,000
+2,500,000
+2,750,000
+3,000,000
+3,250,000
+3,500,000
+3,750,000
+4,000,000
+4,250,000
+4,500,000
+4,750,000
+5,000,000
+6,000,000
+7,000,000
+8,000,000
+9,000,000
+10,000,000
+
+
+
+
+
+
+Powered by  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Find A Hotel
+
+
+
+Home, Restaurant, etc...
+Restaurant
+Where & When / Event
+Happy Hour
+Spa
+Home
+Hotel
+ 
+
+Search by Keyword
+
+
+
+
+Select Neighborhood & Setting
+
+
+All Neighborhoods
+District of Columbia
+     Adams Morgan
+     Brookland
+     Capitol Hill
+     Capitol Hill, National Mall
+     Capitol Hill, Northeast
+     Capitol Hill, Southeast
+     Capitol Hill, Southwest/Waterfront
+     Cleveland Park
+     Columbia Heights
+     Downtown
+     Dupont Circle
+     Foggy Bottom/West End
+     Georgetown
+     Georgia Ave./Petworth/Takoma DC
+     Glover Park
+     H Street NE
+     Logan Circle
+     Mt. Pleasant/Columbia Heights
+     Palisades
+     Penn Quarter/Chinatown
+     Petworth
+     Southeast
+     U Street/Shaw
+     Upper Northwest
+     Woodley Park
+Maryland
+     Annapolis
+     Baltimore
+     Beltsville
+     Bethesda/Glen Echo
+     Bladensburg
+     Bowie
+     Brookeville
+     Bryan's Road
+     Burtonsville
+     Carroll County
+     Chevy Chase
+     Clinton
+     College Park
+     Columbia
+     Crownsville
+     Damascus
+     Easton
+     Ellicott City
+     Fort Washington
+     Frederick
+     Fulton
+     Gaithersburg
+     Germantown
+     Glen Burnie
+     Grasonville
+     Greenbelt
+     Hagerstown
+     Hyattsville
+     Kensington/Garrett Park
+     La Plata
+     Landover
+     Langley Park
+     Largo
+     Laurel
+     Maple Lawn
+     Mitchellville
+     National Harbor
+     Northern Montgomery County
+     Olney
+     Potomac/Cabin John
+     Rockville
+     Seabrook
+     Silver Spring/Takoma Park
+     Southern PG County
+     Stevensville
+     Tenleytown/Friendship Heights
+     Waldorf
+     Wheaton
+Virginia
+     Alexandria
+     Alexandria, Del Ray
+     Alexandria, Old Town 
+     Annandale
+     Arlington
+     Arlington, Ballston
+     Arlington, Clarendon/Courthouse
+     Arlington, Crystal City/Pentagon City
+     Arlington, Rosslyn
+     Arlington, Shirlington
+     Arlington, South 
+     Ashburn
+     Baileys Crossroads
+     Barboursville
+     Bristow
+     Chantilly/Centreville/Clifton
+     Culpeper
+     Fairfax
+     Falls Church
+     Flint Hill
+     Fredericksburg
+     Front Royal
+     Great Falls
+     Leesburg
+     Leon
+     Little Washington
+     Lovettsville
+     Manassas
+     McLean/Tysons Corner
+     Mclean
+     Middleburg
+     Reston/Herndon
+     Round Hill
+     Shenandoah Valley
+     Springfield
+     Sterling
+     The Plains
+     Upperville
+     Vienna
+     Warrenton
+     Winchester-Frederick
+     Woodbridge
+
+
+
+Select Type
+
+
+All Types
+Hotel
+Bed & Breakfast
+Resort
+Inn
+
+
+
+ Kid Friendly
+           Valet Parking
+ Handicap Accessible
+        
+
+Amenities:
+ Childcare
+ WiFi
+ Pet Friendly
+ Bar/Lounge/Dining
+ Airport Shuttle
+ Salon/Spa
+ Swimming Pool
+ Fitness Room
+ On-site Drycleaning
+ Meeting Rooms
+ Golf
+ Tennis Courts
+ Game Room
+        
+
+
+
+
+
+
+
+
+
+  document.getElementById('superfinder_2').style.display='none';document.getElementById('superfinder_3').style.display='none';document.getElementById('superfinder_4').style.display='none';document.getElementById('superfinder_5').style.display='none';document.getElementById('superfinder_6').style.display='none';document.getElementById('superfinder_7').style.display='none';
+
+
+Or search editors' lists
+
+Restaurants: 100 Very Best
+Restaurants: Cheap Eats
+Drinks: Great Bars
+Restaurants: First Look
+
+
+
+
+
+
+
+
+
+I would like to receive the following free email newsletters:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Newsletter Signup
+
+
+
+ 
+                    Bridal Party
+             
+
+ 
+                    Dining Out
+             
+
+ 
+                    Kliman Online
+             
+ 
+                    Photo Ops
+             
+
+
+Shop Around
+ 
+                    Where & When
+             
+
+ 
+                    Well+Being
+             
+
+
+
+
+
+
+
+Learn more
+
+
+
+
+
+
+
+var icpForm1674 = document.getElementById('icpsignup1674');
+
+if (document.location.protocol === "https:")
+
+	icpForm1674.action = "https://app.icontact.com/icp/signup.php";
+function verifyRequired1674() {
+  if (icpForm1674["fields_email"].value == "") {
+    icpForm1674["fields_email"].focus();
+    alert("The Email field is required.");
+    return false;
+  }
+
+    if (
+      !icpForm1674["listid:9857616"].checked &&
+      !icpForm1674["listid:9857617"].checked &&
+      !icpForm1674["listid:9857618"].checked &&
+      !icpForm1674["listid:9857619"].checked &&
+      !icpForm1674["listid:9857621"].checked &&
+      !icpForm1674["listid:9871285"].checked &&
+      !icpForm1674["listid:9873074"].checked &&
+      true)  {
+    alert("The Lists field is required.");
+    return false;
+  } 
+
+return true;
+}
+
+
+
+
+ 
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Privacy Policy
+
+Washingtonian.com may use personally identifiable information (your name, e-mail address, street address, telephone number) subject to the terms of this privacy policy.  This privacy policy pertains to information collected when you subscribe to Washingtonian magazine and visit the Washingtonian.com site.
+Information We Collect from You
+The information we collect varies depending on the services you ask us to provide. You can visit most pages on our website without providing any information. On certain pages, however, you may be asked to provide personal information--examples are when you subscribe to Washingtonian Magazine, renew your subscription, purchase a holiday gift subscription, submit a customer service inquiry, or make a purchase.  You may also be asked to provide personal information if you participate in sweepstakes and contests, surveys, message boards and chat rooms, or other interactive areas of our site. 
+The types of personal information we collect may include your first and last name, Internet Protocol address, zip code, mailing address, e-mail address, gender, and phone number.
+Washingtonian.com also collects information automatically through the use of electronic tools such as "cookies" and "clickstream data."  Cookies help provide a customized web experience by enabling us to identify web users who visit our site.  Among other things, the cookie may store your Washingtonian.com user name and password.  You may choose not to provide such information by adjusting your Internet browser security settings to refuse cookies.  Doing so, however, may limit your ability to access certain pages available on the website and may prevent you from enjoying the features on our website enabled by cookies.
+In addition, our site uses third-party software to analyze the web pages within our site that your computer visits.  This information, called "clickstream data," is associated with your computer's IP address. We do not associate clickstream data with your name, mailing address, or any other personal information.  We collect clickstream data to analyze which portions of our site draw the most traffic so we can improve performance of our site. We also may track how many recipients of our e-mail newsletters click through to other sites. This clickstream data may be shared, in aggregate and anonymous form, with third-party advertisers. We do not associate clickstream data with personally identifiable information.
+What We Do with Information We Collect from You
+We use any information we collect from you in accordance with applicable laws.  We may use aggregated information--information that cannot be used to identify you individually--in many ways.  For example, we may combine information about your usage patterns with the usage patterns of other users to identify pages on our website that are frequently visited so we can improve our site's performance.  We may occasionally share aggregated, anonymous information with our business partners and affiliates and/or with third-party advertisers, but this information cannot be traced back to you individually or used to contact you.
+We may use your personal contact information, including your e-mail address, to communicate with you regarding your subscription(s), other features and services offered by Washingtonian.com, Washingtonian magazine, or our affiliates and business partners, our Terms of Service, and/or this Privacy Policy.  We may also use your personal contact information to process e-commerce transactions or send e-mail newsletters on other topics we think you might find of interest.  We reserve the right to share your personal contact information with our affiliates and business partners.
+Personal information collected by Washingtonian.com may also be used for other purposes, including but not limited to site administration and troubleshooting. Third-party service providers who provide technical support for the operation of our site may access such information, but only for the purpose of administering technical support.
+If you register to receive e-mail newsletters on the site, we will not share or sell your registration information, including your name and e-mail address, with third parties for any purpose. If you subscribe to Washingtonian magazine, we may sell or rent lists containing your postal address to third parties for advertising purposes.
+Like any other company, we may sell, buy, merge, or partner with other companies or businesses. In such transactions, information about our subscribers and website visitors may be among the transferred assets.  We may also disclose your information in response to a court order or other valid legal process or at other times when we believe we are reasonably required to do so by law, in connection with payments you may owe to us, and/or whenever we deem it appropriate or necessary to give such information to law-enforcement authorities. At our discretion, we may not provide you with notice prior to such disclosures.
+How You Can Control the Information We Collect About You
+You can always choose not to submit your personal information on the Washingtonian.com website. If you do not wish to receive e-mail messages from Washingtonian.com about new features or products we think may be of interest, you can unsubscribe at any time. We will always include  an opt-out web link or reply e-mail address in each e-mail message. After unsubscribing, you will be removed from our e-mail database. Please allow up to 10 business days to process your request. After unsubscribing, you may still receive e-mail messages about the status of your account, to resolve technical issues, or to confirm a new subscription.
+If you wish to make changes to any personal information you have provided us, or if you have any questions about what we do with your personal information, please contact us by sending an e-mail to privacy@washingtonian.com.
+How Your Personal Information is Protected Online
+To prevent unauthorized access, maintain data accuracy, and ensure the appropriate use of personally identifiable information, we have put in place physical, electronic, and administrative procedures to protect the personally identifiable information we collect online.
+Affiliated Websites, Third-Party Linked Sites, and Third-Party Advertisements
+The ads appearing on this web site are delivered to you by our web advertising partners, including DoubleClick and Google. Washingtonian.com expects its business partners, advertisers, and third-party affiliates to respect the privacy of our users.  However, third parties' web sites - including those of our partners, advertisers, affiliates, and other content providers'- have their own privacy practices and policies.  When you click on a banner advertisement or link from Washingtonian.com to an external Web site, you  should review that site's Privacy Policy  before submitting any personal information on the site.
+Our Web advertising partners send us aggregate, anonymous information about visits to this site, such as the number of times visitors clicked on a particular advertisement - but not visitors' names, addresses, or other personal information. 
+You also should be aware that our Web advertising partners may place or recognize a unique cookie on your browser. Cookies enable advertisers to determine whether you have seen a particular advertisement before. For more information about DoubleClick's privacy practices, cookies, and how to "opt-out" of receiving cookies, please visit http://www.doubleclick.net/us/corporate/privacy. For more information about Google's privacy practices, please visit  http://www.google.com/privacy.html.
+Children
+Washingtonian.com does not knowingly collect or solicit personally identifiable information from or about children under 13, except as permitted by federal law. If we discover that we have received any personally identifiable information from a child under 13 in violation of this policy, we will delete such information from our servers immediately.  If you believe Washingtonian.com has any information from or pertaining to anyone under 13, please contact us at the address listed below.
+Contacting Us
+We can be reached by contacting:
+Washingtonian.com
+1828 L Street, NW - Suite 200
+Washington, D.C. 20035
+Email: privacy@washingtonian.com
+Changes to This Policy
+Washingtonian.com reserves the right to change this policy at any time. Please check this page periodically for changes.  We will post a notice on this site if and when this policy changes to alert visitors that a new policy is in place. Your continued use of our website following the posting of changes to our privacy policy will mean that you accept such changes.  Information collected prior to the time any change is posted will be used according to the policy and applicable laws in place at the time the information was collected.
+Governing Law
+This policy and the use of this website are governed by District of Columbia law.  Any claim related to the website or this policy shall be brought in a federal or state court in Washington, D.C., within one year after the claim arises.  You agree that no such claim may be brought as a class action.  Users of Washingtonian.com consent to the jurisdiction and venue of such court as the most convenient and appropriate for the resolution of disputes concerning this policy. Washingtonian.com is controlled, operated, and administered entirely within the United States.  If you are located outside the United States, please note that the information you provide to us will be transferred to the United States.  You hereby consent to this transfer.
+Special Notification for California Residents
+From time-to-time, Washingtonian magazine and/or Washingtonian.com may provide its business partners with your name and mailing address for marketing relevant services, products, and programs to you.
+If you reside in California, you may request information about our disclosures of your personal information to third parties for their direct marketing purposes. Such requests must be submitted to us by e-mail at privacy@washingtonian.com or by mail to: Washingtonian.com, 1828 L Street, NW - Suite 200, Washington, D.C. 20035, ATTN:  CALIFORNIA PRIVACY DISCLOSURES. Within thirty days of receiving such a request, we will provide a list of the categories of personal information (e.g., your mailing address) disclosed to third-parties for third-party direct marketing purposes during the immediately preceding calendar year, along with the names and addresses of these third parties. This request may be made no more than once per calendar year. We reserve the right not to respond to requests submitted other than as specified in this paragraph.
+Effective Date
+This Privacy Policy is effective as of February 6, 2009.
+ Copyright Â© 2009, Washingtonian.com
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ Home 
+ Subscribe 
+ Advertise 
+ Special Events 
+ Internships 
+ Employment Opportunities 
+ About Us 
+ Writer's Guidelines 
+ Email Newsletters 
+
+
+
+
+ Contact Us Privacy Policy Site Map
+
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+document.write("&copy;" + year);
+Â©2015
+ Washington Magazine, Inc. 
+
+
+
+
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1860879-1']);
+  _gaq.push(['_setDomainName', 'washingtonian.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+//Bad Robot Detection
+
+  var category = 'trafficQuality';
+  var dimension = 'botDetection';
+  var human_events = ['onkeydown','onmousemove'];
+
+  if ( navigator.appName == 'Microsoft Internet Explorer' && !document.referrer) {
+    for(var i = 0; i < human_events.length; i++){
+      document.attachEvent(human_events[i], ourEventPushOnce);
+    }
+  }else{
+    _gaq.push( [ '_trackEvent', category, dimension, 'botExcluded', 1, true ] );
+  }
+
+  function ourEventPushOnce(ev) {
+
+    _gaq.push( [ '_trackEvent', category, dimension, 'on' + ev.type, 1, true ] );
+
+    for(var i = 0; i < human_events.length; i++){
+      document.detachEvent(human_events[i], ourEventPushOnce);
+    }
+
+  } // end ourEventPushOnce()
+
+  //End Bad Robot Detection
+
+
+
+ 
+_qoptions={
+qacct:"p-98HBdZz99wA1A"};
+
+
+ 
+<img src="//pixel.quantserve.com/pixel/p-98HBdZz99wA1A.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast" />
+
+
+
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'washingtonian'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+
+
+AddThisfree
