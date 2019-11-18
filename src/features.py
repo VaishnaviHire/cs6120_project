@@ -3,6 +3,7 @@ import os
 import numpy as np
 import scipy.spatial.distance as distance
 import gensim
+from collections import defaultdict
 import re
 from src.preprocess import remove_punctuation
 
@@ -47,7 +48,7 @@ def get_sentence_vector(sentence):
 
 #
 def calculate_sentence_sim(s1):
-    # - Statement 1 (Clear Purpose): For what purposes does the company use personal information?
+    #       - Statement 1 (Clear Purpose): For what purposes does the company use personal information?
     #     # - Statement 2 (Third Parties): Does the company share my information with third parties?
     #     # - Statement 3 (Limited Collection): Does the company combine my information with data from other sources?
     #     # - Statement 4 (Limited Use): Will the company sell, re-package or commercialize my data?
@@ -74,12 +75,12 @@ def get_policy_vectors(filepath):
     with open(filepath,'r') as f:
 
         data = nlp(remove_punctuation(f.read()))
-        res = []
+        res = {}
         for sentence in data.sents:
             sentence_sim_vector = calculate_sentence_sim(sentence)
             # if max(sentence_sim_vector) >= 0.65:
             #     print(sentence)
-            res.append(sentence_sim_vector)
+            res[sentence] = sentence_sim_vector
 
     return res
 #
@@ -93,9 +94,31 @@ def get_policy_vectors(filepath):
 #
 #
 
-similarity_array = get_policy_vectors('../data/notags_policies/33_nbcuniversal.txt')
+similarity_array = get_policy_vectors('../data/notags_policies/20_theatlantic.txt')
+class_array={}
+for k,row in similarity_array.items():
+    if max(row) >= 0.65:
+        class_array[k] = row.index(max(row)) + 1
+    else:
+        class_array[k] = 0
 
-class_array = [(row.index(max(row)) + 1) if max(row) >= 0.65 else 0 for row in x_data]
+
+
+# class_array = {k :(row.index(max(row)) + 1) if max(row) >= 0.65 else k:0 for k,row in similarity_array.items()}
+
+
+# Group by values
+res = defaultdict(list)
+for key, val in sorted(class_array.items()):
+    res[val].append(key)
+
+class_names = {0:'Other',1:'Clear Purpose',2:'Third Parties',3:'Limited Collection',4:'Limited Use',5:'Retention'}
+
+with open('../results/20_theatlantic.txt', 'w') as f:
+    for i, val in res.items():
+        f.write('\n\n' + 'Class is : '+ str(i) + ' ' + class_names[i] + '\n\n')
+        for item in val:
+            f.write(str(item)+'\n')
 
 print(similarity_array)
 print(class_array)
