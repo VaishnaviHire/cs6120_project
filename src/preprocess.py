@@ -27,17 +27,11 @@ def convert_clean_summaries(src_dir, target_dir):
             f.write(cleantext)
 
 
-def remove_punctuation(src_dir):
-    contents = {}
-    for file in os.listdir(src_dir):
-        with open(src_dir + '/' + file, 'r', encoding="ISO-8859-1") as f:
-            data = f.read()
-            data = re.sub("_", "", data)
-            data = re.sub("[^\w\s]", "", data)
+def remove_punctuation(data):
+    data = re.sub("_", "", data)
+    data = re.sub("[^\w\s]", "", data)
+    data = re.sub(' +', ' ', data)
 
-            contents[file] = data
-
-    return contents
+    return data
 
 
-convert_clean_summaries()
