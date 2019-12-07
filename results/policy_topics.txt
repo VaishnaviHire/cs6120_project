@@ -1,0 +1,30 @@
+Most common topics for category First Party Collection/Use
+['information', 'services', 'use', 'provide', 'products', 'Services', 'site', 'content', 'users', 'Site', 'improve', 'purposes', 'service', 'collect', 'help', 'online', 'experience', 'email', 'features', 'account', 'order', 'send', 'advertising', 'certain', 'Sites', 'sites', 'user', 'address', 'cookies', 'including']
+
+Most common topics for category User Access, Edit and Deletion
+['information', 'account', 'personal', 'update', 'email', 'request', 'personally', 'provided', 'contact', 'identifiable', 'Information', 'time', 'preferences', 'access', 'delete', 'profile', 'changes', 'change', 'address', 'correct', 'including', 'settings', 'Account', 'provide', 'certain', 'use', 'collected', 'Profile', 'review', 'User']
+
+Most common topics for category Other
+['information', 'privacy', 'use', 'Privacy', 'Policy', 'policy', 'services', 'personal', 'sites', 'contact', 'email', 'Information', 'practices', 'websites', 'site', 'website', 'Services', 'provide', 'cookies', 'collect', 'parties', 'online', 'including', 'users', 'collected', 'data', 'access', 'policies', 'questions', 'Site']
+
+Most common topics for category Data Security
+['information', 'security', 'access', 'use', 'personal', 'protect', 'secure', 'unauthorized', 'data', 'privacy', 'measures', 'SSL', 'reasonable', 'services', 'ensure', 'credit', 'Internet', 'password', 'card', 'Information', 'maintain', 'physical', 'help', 'transmission', 'sites', 'Privacy', 'personally', 'identifiable', 'place', 'software']
+
+Most common topics for category User Choice/Control
+['information', 'email', 'cookies', 'receive', 'address', 'communications', 'use', 'personal', 'messages', 'promotional', 'offers', 'emails', 'cookie', 'services', 'data', 'Privacy', 'advertising', 'mail', 'marketing', 'Policy', 'certain', 'newsletters', 'Services', 'online', 'Advertising', 'receiving', 'contact', 'parties', 'time', 'Flash']
+
+Most common topics for category Third Party Sharing/Collection
+['information', 'use', 'share', 'disclose', 'collect', 'cookies', 'provide', 'parties', 'personal', 'access', 'party', 'services', 'sell', 'Services', 'Information', 'shared', 'collected', 'companies', 'site', 'service', 'users', 'transferred', 'transfer', 'technologies', 'assets', 'websites', 'data', 'certain', 'thirdparty', 'sites']
+
+Most common topics for category Policy Change
+['notice', 'changes', 'Privacy', 'Policy', 'page', 'post', 'email', 'policy', 'change', 'privacy', 'time', 'revised', 'notify', 'information', 'posted', 'posting', 'updated', 'website', 'date', 'use', 'site', 'provide', 'Updated', 'users', 'effective', 'means', 'Site', 'Sites', 'check', 'prominent']
+
+Most common topics for category International and Specific Audiences
+['information', 'personal', 'children', '13', 'California', 'age', 'Privacy', 'use', 'parties', 'request', 'email', 'collect', 'privacy', 'child', 'marketing', 'purposes', 'childs', 'direct', 'address', 'United', 'States', 'consent', 'knowingly', 'Safe', 'Harbor', 'law', 'provide', 'online', 'services', 'MediaNews']
+
+Most common topics for category Do Not Track
+['signals', 'Track', 'respond', 'currently', 'DNT', 'track', 'browsers', 'browser', 'websites', 'time', 'information', 'web', 'recognize', 'support', 'online', 'response', 'settings', 'Sites', 'action', 'opt', 'tracking', 'industry', 'set', 'standards', 'privacy', 'users', 'services', 'requests', 'policy', 'signal']
+
+Most common topics for category Data Retention
+['information', 'purposes', 'use', 'legal', 'services', 'account', 'email', 'law', 'retain', 'provide', 'purpose', 'comply', 'necessary', 'required', 'address', 'data', 'store', 'resolve', 'disputes', 'enforce', 'period', 'applicable', 'obligations', 'records', 'Information', 'request', 'Policy', 'delete', 'fulfill', 'agreements']
+
