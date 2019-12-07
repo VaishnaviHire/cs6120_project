@@ -1,0 +1,36 @@
+
+Basline Model : Cosine Similarity
+Accuracy : 0.5129244249726177
+
+Basline Model : KNN
+Accuracy : 0.6242527754056362
+
+MLP Classifier:
+Accuracy: 0.6797608881298036
+
+LDA Classifier:
+Accuracy : 0.667805294619983
+
+
+
+Accuracy to Classify Threat :
+First Party Collection/Use
+0.8
+Third Party Sharing/Collection
+0.8
+User Choice/Control
+0.6
+Data Security
+0.6
+User Access, Edit and Deletion
+0.6
+International and Specific Audiences
+0.6
+Data Retention
+0.6
+Policy Change
+0.8
+Do Not Track
+0.75
+Other
+0.8

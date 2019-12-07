@@ -1,4 +1,5 @@
 Grid search result:
+[hidden_layer, iteration, learning_rate]
 [100, 200, 0.001]
 0.7069003285870756
 

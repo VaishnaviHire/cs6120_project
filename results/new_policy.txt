@@ -1,3 +1,7 @@
+
+
+
+
 Data Retention
 []
 
@@ -29,6 +33,7 @@ Data Retention
  'We collect information through our website in a couple different ways.  ',
  'You give us personal information when you join one of our loyalty clubs, enter one of our surveys, contests or sweepstakes, if you submit a question, comment or complaint, if you request or submit information about becoming a franchisee, if you submit an employment application, or for an online cake order.',
  'you participate in a contest or sweepstakes, we may publish information about you such as your name, city of residence or prize winnings.  ',
+  'Except with your consent or as required or permitted by law, we will use the information you submit for the purposes for which it is submitted or as otherwise described in this privacy statement.',
  '||| COLLECTION & USE OF INFORMATION.    ',
  '||| MOBILE APP    ',
  '||| SECURITY    ',
@@ -48,6 +53,7 @@ Data Retention
  'We and our third party vendors may also use cookies to provide you with our advertising messages on other websites you visit; these third party vendors may collect information about your online activities over time and across different websites based on these cookies.',
  'You agree that any of our successors may use and disclose the information for the same purposes as described in this statement; or  |||As required by law, or as needed to cooperate in or defend against any law enforcement investigation or legal proceeding.  ',
  'Your personal information may be processed and stored in the U.S. or another country, and the government, courts, law enforcement or regulatory agencies of that country may by law be able to obtain your personal information;  |||  ',
+  'Our third party vendors may collect additional information by automated means when you visit our website, such as browser type or operating system.  ',
  '||| SHARING INFORMATION    ',
  '|||We may share aggregated demographic information (data that cannot identify an individual person) with our third party vendors and advertisers.  ',
  '|||We may share your personal information with third parties:     To provide services to you, such as purchasing and shipping goods, or credit card processing;  |||  ']
@@ -65,13 +71,11 @@ Data Retention
  'Attn: Privacy Compliance Officer International Dairy Queen,',
  'California\'s Business and Professions Code section 22575 requires us to disclose how we respond to "do not track" signals.',
  'Cookies are pieces of data your web browser stores on your hard drive that we use to improve your user experience on our website.',
- 'Except with your consent or as required or permitted by law, we will use the information you submit for the purposes for which it is submitted or as otherwise described in this privacy statement.',
  'If you download the official DQ mobile app, our privacy policy regarding use of the app is available within the app.',
  'If you have any questions or concerns about this privacy statement, our privacy practices, or your personal information that is under our control, please contact us at:',
  'If you join one of our loyalty clubs, you may receive newsletters, email or special offers, which you may unsubscribe from at any time using the unsubscribe link at the bottom of the email.  ',
  'Information shared within the DQ/Orange Julius family will comply with this privacy statement.  ',
  'Our privacy practices regarding children will be posted on those websites.  ',
- 'Our third party vendors may collect additional information by automated means when you visit our website, such as browser type or operating system.  ',
  'Please read this privacy statement carefully, because by using our website, you accept and agree to the terms stated below.',
  'There may be other DQ or Orange Julius branded apps run by our franchisees, and our privacy policies do not apply to those apps.  ',
  'This privacy statement applies solely to information collected by this website.  ',
