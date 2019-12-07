@@ -9,16 +9,14 @@ from src.preprocess import remove_punctuation
 from sklearn.neighbors import KNeighborsClassifier
 import math
 
-
 word2vec = gensim.models.KeyedVectors.load_word2vec_format(
     "../data/GoogleNews-vectors-negative300.bin", binary=True)
 nlp = spacy.load('en_core_web_sm')
 
-def word_weights(filepath):
 
+def word_weights(filepath):
     with open(filepath) as f:
         content = f.read()
-
 
 
 def get_sentence_vector(sentence):
@@ -26,7 +24,6 @@ def get_sentence_vector(sentence):
 
     # Word embeddings GoogleNews-vectors-negative300.bin.gz from Word2Vec :
     # https://code.google.com/archive/p/word2vec/ as input for each word.
-
 
     # Calculate the average word embedding for sentences
 
@@ -46,8 +43,8 @@ def get_sentence_vector(sentence):
     # represent each sentence as average of its word embedding
     sentence_score = np.mean(wordvecs, axis=0)
 
-
     return sentence_score
+
 
 #
 def calculate_sentence_sim(s1):
@@ -57,12 +54,14 @@ def calculate_sentence_sim(s1):
     #     # - Statement 4 (Limited Use): Will the company sell, re-package or commercialize my data?
     #     # - Statement 5 (Retention): Will the company retain my data? What is their retention policy?
 
-    s  = get_sentence_vector(s1)
+    s = get_sentence_vector(s1)
     c1 = get_sentence_vector(nlp(remove_punctuation("For what purposes does the company use personal information?")))
     c2 = get_sentence_vector(nlp(remove_punctuation("Does the company share my information with third parties?")))
-    c3 = get_sentence_vector(nlp(remove_punctuation("Does the company combine my information with data from other sources?")))
+    c3 = get_sentence_vector(
+        nlp(remove_punctuation("Does the company combine my information with data from other sources?")))
     c4 = get_sentence_vector(nlp(remove_punctuation("Will the company sell, re-package or commercialize my data?")))
-    c5 = get_sentence_vector(nlp(remove_punctuation("Will the company retain my data? What is their retention policy?")))
+    c5 = get_sentence_vector(
+        nlp(remove_punctuation("Will the company retain my data? What is their retention policy?")))
 
     res = [0] * 5
     res[0] = 1 - distance.cosine(s, c1)
@@ -73,10 +72,9 @@ def calculate_sentence_sim(s1):
 
     return res
 
+
 def get_policy_vectors(filepath):
-
-    with open(filepath,'r') as f:
-
+    with open(filepath, 'r') as f:
         data = nlp(remove_punctuation(f.read()))
         res = {}
         for sentence in data.sents:
@@ -87,9 +85,9 @@ def get_policy_vectors(filepath):
 
     return res
 
-def get_policy_vectors_sents(filepath):
 
-    with open(filepath,'r') as f:
+def get_policy_vectors_sents(filepath):
+    with open(filepath, 'r') as f:
 
         data = nlp(remove_punctuation(f.read()))
         res = {}
@@ -98,7 +96,7 @@ def get_policy_vectors_sents(filepath):
             sentence_sim_vector = get_sentence_vector(nlp((str(sentence.text))))
 
             if np.isnan(sentence_sim_vector).any():
-                res[sentence] = np.array([0.0]*300)
+                res[sentence] = np.array([0.0] * 300)
                 continue
             print(type(sentence_sim_vector))
             # if math.isnan(sentence_sim_vector):
@@ -120,19 +118,15 @@ def get_policy_vectors_sents(filepath):
 #     return all_policies
 
 
-
 similarity_array = get_policy_vectors('../data/notags_policies/33_nbcuniversal.txt')
 vector_array = get_policy_vectors_sents('../data/notags_policies/33_nbcuniversal.txt')
 
-class_array= {}
-for k,row in similarity_array.items():
+class_array = {}
+for k, row in similarity_array.items():
     if max(row) >= 0.65:
         class_array[k] = row.index(max(row)) + 1
     else:
         class_array[k] = 0
-
-
-
 
 # x = list(vector_array.keys())
 # y = list(class_array.keys())
@@ -143,12 +137,20 @@ for k,row in similarity_array.items():
 #     Y.append(class_array[y[i]])
 
 X = list(vector_array.values())
-Y = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '2', '0', '45', '0', '34', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1234', '2', '4', '0', '2', '0', '0', '0', '1', '5', '5', '1', '1', '2', '0', '0', '1', '1', '2', '34', '0', '4', '4', '4', '4', '4', '12', '1', '2', '2', '2', '2', '23', '34', '3', '34', '2', '0', '13', '3', '34', '0', '24', '24', '24', '2', '3', '0', '2', '2', '2', '2', '2', '2', '2', '2', '0', '0', '0', '0', '0', '0', '0', '5', '2', '0', '0', '0', '5', '0', '0', '5', '5', '5', '5', '5', '5', '0', '1', '5', '15', '0', '0', '0', '0', '5', '5', '0', '0', '0', '0', '0', '15', '4', '5', '0', '0', '5', '5', '5', '0', '1', '24', '2', '2', '2', '2', '2', '0', '0', '0', '0', '1', '0', '0', '0', '0', '2', '2', '0', '2', '2', '2', '0', '0', '4', '4', '0', '0', '4', '2', '2', '0', '0', '0', '12', '2', '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+Y = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '2', '0', '45', '0', '34', '0', '0', '0', '0',
+     '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1234', '2', '4',
+     '0', '2', '0', '0', '0', '1', '5', '5', '1', '1', '2', '0', '0', '1', '1', '2', '34', '0', '4', '4', '4', '4', '4',
+     '12', '1', '2', '2', '2', '2', '23', '34', '3', '34', '2', '0', '13', '3', '34', '0', '24', '24', '24', '2', '3',
+     '0', '2', '2', '2', '2', '2', '2', '2', '2', '0', '0', '0', '0', '0', '0', '0', '5', '2', '0', '0', '0', '5', '0',
+     '0', '5', '5', '5', '5', '5', '5', '0', '1', '5', '15', '0', '0', '0', '0', '5', '5', '0', '0', '0', '0', '0',
+     '15', '4', '5', '0', '0', '5', '5', '5', '0', '1', '24', '2', '2', '2', '2', '2', '0', '0', '0', '0', '1', '0',
+     '0', '0', '0', '2', '2', '0', '2', '2', '2', '0', '0', '4', '4', '0', '0', '4', '2', '2', '0', '0', '0', '12', '2',
+     '1', '1', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0']
 
 print(len(X), len(Y))
 # for k, v in vector_array.items():
 #     X.append(v)
-    # Y.append(class_array[str(k)])
+# Y.append(class_array[str(k)])
 
 # class_array = {k :(row.index(max(row)) + 1) if max(row) >= 0.65 else k:0 for k,row in similarity_array.items()}
 
